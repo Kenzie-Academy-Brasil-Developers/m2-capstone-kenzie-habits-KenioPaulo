@@ -1,3 +1,9 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-inter);
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -60,16 +66,57 @@ header{
     margin: 50px;
     width: 82vw;
     justify-content: space-between;
-    margin-left: 8vw;
+    margin-left: 3vw;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .title_tarefa{
     font-weight: 600;
     font-size: 20px;
+    align-self: flex-start;
 }
+
+
 .bttn_Todos{
     border: none;
 }
 
+.tabela {
+    width: 100vw;
+    
+}
 
+thead tr th {
+    color: rgb(var(--grey-3))
+    
+}
 
+td {
+    padding: 0px;
+    max-height: 26px;
+    border-top: 2px solid rgb(var(--grey-4)) ;
+}
+
+.td_checkbox, .td_editar {
+    height: 26px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.descricao, .categoria, .td_categoria {
+    display: none;
+}
+
+.button_editar {
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    margin-top: 2px;
+}
+
+.tarefa_completa {
+    text-decoration: line-through;
+}

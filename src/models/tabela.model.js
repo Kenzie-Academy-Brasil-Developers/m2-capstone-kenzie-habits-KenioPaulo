@@ -22,6 +22,7 @@ export default class Tabela {
         const td       = document.createElement("td")
         const checkbox = document.createElement("input")
         checkbox.type  = "checkbox"
+        td.classList.add("td_checkbox")
         checkbox.classList.add("button_check")
         td.append(checkbox)
         return td
@@ -46,6 +47,7 @@ export default class Tabela {
         const span     = document.createElement("span")
         span.innerText = texto
         span.classList.add("categoria")
+        td.classList.add("td_categoria")
         td.append(span)
         return td
     }
@@ -55,6 +57,7 @@ export default class Tabela {
         const button     = document.createElement("button")
         button.innerText = "..."
         button.classList.add("button_editar")
+        td.classList.add("td_editar")
         td.append(button)
         return td
     }
