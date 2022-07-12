@@ -1,5 +1,5 @@
 export default class FormLogin {
-    static registerForm = document.getElementById("form_login");
+    static registerForm = document.getElementById("login_form");
     static buttonForm = document.querySelector(".button_form");
     static token = ""
 
@@ -18,7 +18,7 @@ export default class FormLogin {
 
     static async loginUser(data) {
         const response = await fetch(
-            "https://blog-m2.herokuapp.com/users/login",
+            "https://habits-kenzie.herokuapp.com/api/userLogin",
             {
               method: "POST",
               headers: {
@@ -33,7 +33,7 @@ export default class FormLogin {
                 localStorage.setItem("userId", res.userId)
                 localStorage.setItem("token", res.token)
                 console.log(localStorage.getItem("token"))
-                window.location.replace("/src/pages/principal.html")
+                // window.location.replace("/src/pages/principal.html")
             } else {
                 alert("login invalido")
             }
