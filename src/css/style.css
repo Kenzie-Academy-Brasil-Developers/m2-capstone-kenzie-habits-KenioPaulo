@@ -1,0 +1,26 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--font-inter);
+}
+
+.tabela {
+    width: 100vw;
+    
+}
+
+thead tr th {
+    color: rgb(var(--grey-3))
+    
+}
+
+.td_checkbox, .td_editar {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.descricao, .categoria, .td_categoria {
+    display: none;
+}
