@@ -65,6 +65,8 @@ export default class Modais {
     
             titulo_categoria.innerText = "Categoria"
     
+            option.value = "selecionar"
+            option.innerText = "Selecionar Categoria"
             option.value = "saude"
             option.innerText = "Saude"
     
