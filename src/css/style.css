@@ -1,0 +1,75 @@
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.header_kenzieHabit{
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    align-items: center; 
+}
+
+.header_usuario{
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    height: 13vh;
+    color: white;
+    gap: 1vw;
+}
+
+.img_kenzieHabit{
+    width: 37px;
+    height: 37px;
+    border-radius: 100px;
+    border: 2px solid #415AF3;
+}
+
+.img_user{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 2px solid #FFFFFF;
+}
+
+.title_kenzie{
+    margin-left: 8vw;
+    font-size: 22px;
+}
+
+.figure_user{
+    margin-left: 8vw;
+}
+
+.figure_userKenzie{
+    margin-right: 10vw;
+}
+.user_name{
+    font-size: 20px;
+}
+
+
+/* Tarefas */
+
+.nav_Tarefas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    width: 82vw;
+    justify-content: space-between;
+    margin-left: 8vw;
+}
+
+.title_tarefa{
+    font-weight: 600;
+    font-size: 20px;
+}
+.bttn_Todos{
+    border: none;
+}
+
+
+
