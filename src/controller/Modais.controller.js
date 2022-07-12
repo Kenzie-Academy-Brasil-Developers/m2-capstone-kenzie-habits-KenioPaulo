@@ -1,9 +1,75 @@
 export default class Modais {
     static criarHabito() {
+        const modalPage = document.querySelector(".modal_page")
+        modalPage.innerText = ""
+        
+        const corpoPrincipal = document.createElement("div")
+        
+        const cabecalhoCriar = document.createElement("div")
+        const cabecalhoTitulo = document.createElement("h3")
+        const btnFechar = document.createElement("button")
 
+        const corpoConteudo = document.createElement("div")
+        const conteudoCabecalho = document.createElement("p")
+        const inputTitulo = document.createElement("input")
+
+        const conteudoDescricao = document.createElement("p")
+        const inputDescricao = document.createElement("input")
+        
+        const conteudoCategoria = document.createElement("p")
+        const selecao = document.createElement("select")
+
+        const option1 = document.createElement("option")
+        const option2 = document.createElement("option")
+        const option3 = document.createElement("option")
+        const option4 = document.createElement("option")
+
+        const btnInserir = document.createElement("button")
+
+        corpoPrincipal.classList.add("corpo_principal")
+        cabecalhoCriar.classList.add("cabecalho")
+        cabecalhoTitulo.classList.add("cabecalho_titulo")
+        btnFechar.classList.add("btn_fechar")
+        corpoConteudo.classList.add("corpo_conteudo")
+        conteudoCabecalho.classList.add("conteudo_cabecalho")
+        inputTitulo.classList.add("input_titulo")
+        conteudoDescricao.classList.add("conteudo_descricao")
+        inputDescricao.classList.add("input_descricao")
+        conteudoCategoria.classList.add("conteudo_categoria")
+        selecao.classList.add("selecao")
+        btnInserir.classList.add("btn_inserir")
+
+        option1.value = "saude"
+        option2.value = "trabalho"
+        option3.value = "lazer"
+        option4.value = "estudos"
+
+        cabecalhoTitulo.innerText = "Criar Habito"
+        btnFechar.innerText = "X"
+        conteudoCabecalho.innerText = "Titulo"
+        inputDescricao.type = "text"
+        inputDescricao.name = ""
+        inputDescricao.placeholder = "Digitar descrição"
+        conteudoCategoria.innerText = "Categoria"
+        selecao.name = "selecionar"
+
+        option1.innerText = "Saude"
+        option2.innerText = "Trabalho"
+        option3.innerText = "Lazer"
+        option4.innerText = "Estudos"
+
+        cabecalhoCriar.append(cabecalhoTitulo, btnFechar)
+        selecao.append(option1, option2, option3, option4)
+        corpoConteudo.append(conteudoCabecalho, inputTitulo, conteudoDescricao, inputDescricao, conteudoCategoria, selecao)
+        corpoPrincipal.append(cabecalhoCriar, corpoConteudo, btnInserir)
+        modalPage.appendChild(corpoPrincipal)
     }
 
     static editarHabito() {
+
+        const modalPage = document.querySelector(".modal_page")
+        modalPage.innerText = ""
+
         const corpoPrincipal = document.createElement("div")
 
         const cabecalho = document.createElement("div")
@@ -61,6 +127,8 @@ export default class Modais {
     
             titulo_categoria.innerText = "Categoria"
     
+            option.value = "selecionar"
+            option.innerText = "Selecionar Categoria"
             option.value = "saude"
             option.innerText = "Saude"
     
@@ -75,6 +143,7 @@ export default class Modais {
     
             btn_excluir.innerText = "Excluir"
             btn_alterar.innerText = "Salvar Alterações"
+            
     
     //////////////////Append//////////////////////
     
@@ -85,6 +154,8 @@ export default class Modais {
             titulo.append(titulo_texto,input_titulo, titulo_descricao, input_descricao, titulo_categoria,selecao)
     
             corpoPrincipal.append(cabecalho, titulo)
+
+            modalPage.appendChild(corpoPrincipal)
         }
     
     
@@ -133,7 +204,7 @@ export default class Modais {
     static excluirHabito() {
         const modalPage = document.querySelector(".modal_page")
         modalPage.innerText = ""
-        
+
         const corpoPrincipal = document.createElement("div")
 
         const corpoBtn = document.createElement("div")
