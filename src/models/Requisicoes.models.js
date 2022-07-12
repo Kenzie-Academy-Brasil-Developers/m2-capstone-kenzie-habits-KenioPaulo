@@ -27,6 +27,9 @@ export default class Requisicoes {
         .then(response => {
             localStorage.setItem(`@kenzie:token`, response.token)
             localStorage.setItem(`@kenzie:user`, JSON.stringify(response.response))
+            if(response.message){
+                alert("Informe um Email e senha correto")
+            } else {window.location.replace("../../index.html")}
             return response
         })
         .catch(err => console.log(err))
