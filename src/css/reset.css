@@ -1,0 +1,15 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote,
+a, cite, del, em, img, strong, b, u, i, ol, ul, li, fieldset,
+form, label, legend, table, article, aside, details, figure,
+figcaption, footer, header, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    box-sizing: border-box;
+}
+
+ol, ul {
+	list-style: none;
+}
