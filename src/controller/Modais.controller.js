@@ -66,6 +66,10 @@ export default class Modais {
     }
 
     static editarHabito() {
+
+        const modalPage = document.querySelector(".modal_page")
+        modalPage.innerText = ""
+
         const corpoPrincipal = document.createElement("div")
 
         const cabecalho = document.createElement("div")
@@ -123,6 +127,8 @@ export default class Modais {
     
             titulo_categoria.innerText = "Categoria"
     
+            option.value = "selecionar"
+            option.innerText = "Selecionar Categoria"
             option.value = "saude"
             option.innerText = "Saude"
     
@@ -137,6 +143,7 @@ export default class Modais {
     
             btn_excluir.innerText = "Excluir"
             btn_alterar.innerText = "Salvar Alterações"
+            
     
     //////////////////Append//////////////////////
     
@@ -147,6 +154,8 @@ export default class Modais {
             titulo.append(titulo_texto,input_titulo, titulo_descricao, input_descricao, titulo_categoria,selecao)
     
             corpoPrincipal.append(cabecalho, titulo)
+
+            modalPage.appendChild(corpoPrincipal)
         }
     
     
