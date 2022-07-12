@@ -1,3 +1,5 @@
+import Tabela from "./tabela.model.js"
+
 export default class Requisicoes {
     static base_url = "https://habits-kenzie.herokuapp.com/api"
 
@@ -41,7 +43,8 @@ export default class Requisicoes {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${localStorage.getItem("@kenzie:token")}`
-            }
+            }, 
+            body: JSON.stringify(data)
         })
         .then(response => response.json())
         .catch(err => console.log(err))
@@ -56,7 +59,13 @@ export default class Requisicoes {
             }
         })
         .then(response => response.json())
-        .catch(err => console.log(err))
+        .then(response => {
+            console.log(response)
+            return response.forEach(elem => {
+                Tabela.criaLinha(elem)
+             })})
+        .catch(err => console.log(err));
+ 
     }
 
     static async readByCategory(category){
