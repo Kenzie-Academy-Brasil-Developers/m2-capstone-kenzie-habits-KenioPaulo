@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/css/style.css">
-    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/root.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <title>Kenzie Habit</title>
   </head>
   <body>
@@ -29,13 +30,13 @@
 
     <div class="nav_Tarefas">
       <h2 class="title_tarefa">Tarefas</h2>
-      <div>
+      <div class="botoes_tarefas">
         <button class="bttn_Todos">Todos</button>
         <button class="bttn_Concluidos">Concluídos</button>
         <button class="bttn_Criar">Criar</button>
       </div>
     </div>
-
+    
     <table class="tabela">
       <thead>
         <th class="status">Status</th>
@@ -46,6 +47,8 @@
       </thead>
       
     </table>
+
+    <div class="modal_page"></div>
 
     <script type="module" src="src/scripts/index.scripts.js"></script>
   </body>
