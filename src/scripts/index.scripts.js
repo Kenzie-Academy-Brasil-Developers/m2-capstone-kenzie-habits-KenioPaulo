@@ -16,7 +16,7 @@ window.addEventListener("onload" , () => {
 })
 
 
-Requisicoes.realAll()
+Requisicoes.readAll()
 
-// Modais.criarHabito()
-Modais.editarHabito()
+Modais.criarHabito()
+// Modais.editarHabito()
