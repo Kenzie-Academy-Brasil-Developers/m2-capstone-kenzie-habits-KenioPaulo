@@ -20,12 +20,6 @@ botaoCriar.addEventListener('click', () => {
     })
 })
 
-
-// Tabela.botaoEditar.addEventListener("click", () => {
-//     Modais.editarHabito()
-    
-// })
-
 const botaoEditar = document.querySelector(".btn_editar")
 botaoEditar.addEventListener("click", () => {
     Modais.editarPerfil()
@@ -41,6 +35,32 @@ botaoEditar.addEventListener("click", () => {
 
 })
 
+
+
+
+export default function botaoCheck () {
+    const check = document.querySelectorAll(".button_check")
+    check.forEach(elem => {
+        elem.addEventListener("click", (event) => {
+        const evento = event.target
+        console.log(evento.parentNode.parentNode.id)
+            if (evento.tagName === "INPUT" && evento.parentNode.parentNode.id !== "") {
+                const filhos = evento.parentNode.parentNode.children 
+                const arrayFilhos = [...filhos]
+                console.log(evento)
+                if(arrayFilhos[1].style.textDecoration !== "line-through"){
+                    arrayFilhos[1].style.textDecoration = "line-through"
+                } else if (arrayFilhos[1].style.textDecoration == "line-through"){
+                    arrayFilhos[1].style.textDecoration = "none"
+                }
+                        
+            }
+        })
+    })
+}
+
+
+
 export default function botoaoEditar() {
     const editar = document.querySelectorAll(".button_editar")
     console.log(editar)
@@ -52,10 +72,3 @@ export default function botoaoEditar() {
         })
     })
 }
-
-const body = document.querySelectorAll(".button_check")
-body.forEach(elem => {
-    elem.addEventListener("click", (event) => {
-        // console.log(event.target.parentNode.parentNode.id)
-    })
-})
