@@ -1,7 +1,13 @@
 import Requisicoes from "../models/Requisicoes.models.js";
 import Tabela from "../models/tabela.model.js";
 import Modais from "../controller/Modais.controller.js";
-import {botaoEditarPerfil, botaoLogout, botaoCriarHabito, botaoCheck, botaoEditarTarefa } from "../controller/Botoes.controller.js";
+import {
+    botaoEditarPerfil,
+    botaoLogout, 
+    botaoCriarHabito, 
+    botaoCheck, 
+    botaoEditarTarefa 
+} from "../controller/Botoes.controller.js";
 
 // Fazer função ao carregar a pagina rodar isso tudo
 const userName     = document.querySelector(".user_name ")
@@ -33,24 +39,27 @@ botaoCheck()
 botaoEditarTarefa()
 
 
-// const botaoEditar = document.querySelector(".btn_editar")
-// botaoEditar.addEventListener("click", () => {
-//     Modais.editarPerfil()
-//     document.querySelector(".modal_page").style.display = "block"
-//     const botaoSalvar = document.querySelector('.btn_salvar')
-//     botaoSalvar.addEventListener("click", () => {
-//         const inputImagem = document.querySelector('.principal_imagem')
-//         const foto = {
-//             usr_image: ""
-//         }
-//         if (inputImagem.value !== "") {
-//             foto.usr_image = inputImagem.value
-//             console.log(foto)
-//             Requisicoes.updateProfile(foto)
-//         } else {alert("Coloque uma url de uma imagem")}
-//     })
+// const req = {
+//     habit_title: "Fiz isso aqui sem querer",
+//     habit_description: "fazer todos os botoes darem certo",
+//     habit_category: "Saude"
+// }
 
-// })
+// const req2 = {
+//     habit_title: "testar botao editar",
+//     habit_description: "fazer botao editar",
+//     habit_category: "trabalho"
+// }
+
+// const req3 = {
+//     habit_title: "testar botao concluidos",
+//     habit_description: "filtro concluido",
+//     habit_category: "lazer"
+// }
+
+
+
+
 
 
 

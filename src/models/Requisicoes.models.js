@@ -71,6 +71,7 @@ export default class Requisicoes {
         })
         .then(response => response.json())
         .then(response => {
+            console.log(response)
             return response.forEach(elem => {
                 // if(elem.habit_status == true) {
                 //     elem.style.textDecoration = "line-through"

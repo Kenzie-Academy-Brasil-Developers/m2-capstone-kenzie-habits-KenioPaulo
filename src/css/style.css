@@ -65,8 +65,8 @@ header{
 .header_usuario{
     display: flex;
     align-items: flex-start;
-    background-color: blue;
-    height: 23vh;
+    background-color: rgb(var(--brand-1));
+    height: 18vh;
     color: white;
     gap: 1vw;
 }

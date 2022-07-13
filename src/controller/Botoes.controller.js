@@ -59,22 +59,22 @@ function botaoCriarHabito() {
 
 
 function botaoCheck () {
-        const check = document.querySelectorAll(".button_check")
+    const check = document.querySelectorAll(".button_check")
     check.forEach(elem => {
         elem.addEventListener("click", (event) => {
-        const evento = event.target
-        const id = evento.parentNode.parentNode.id
-            if (evento.tagName === "INPUT" && evento.parentNode.parentNode.id !== "") {
-                const filhos = evento.parentNode.parentNode.children 
-                const arrayFilhos = [...filhos]
-                console.log(evento)
-                if(arrayFilhos[1].style.textDecoration !== "line-through"){
-                    // console.log(evento.parentNode.parentNode.id)
-                    arrayFilhos[1].style.textDecoration = "line-through"
-                    Requisicoes.completeHabit(id)
-                } 
-                        
-            }
+            const evento = event.target
+            const id = evento.parentNode.parentNode.id
+                if (evento.tagName === "INPUT" && evento.parentNode.parentNode.id !== "") {
+                    const filhos = evento.parentNode.parentNode.children 
+                    const arrayFilhos = [...filhos]
+                    console.log(evento)
+                    if(arrayFilhos[1].style.textDecoration !== "line-through"){
+                        // console.log(evento.parentNode.parentNode.id)
+                        arrayFilhos[1].style.textDecoration = "line-through"
+                        Requisicoes.completeHabit(id)
+                    } 
+                            
+                }
         })
     })
 }
@@ -98,4 +98,10 @@ function botaoEditarTarefa() {
 }
 
 
-export {botaoCheck , botaoEditarTarefa, botaoEditarPerfil , botaoLogout, botaoCriarHabito}
+export {
+    botaoCheck, 
+    botaoEditarTarefa, 
+    botaoEditarPerfil, 
+    botaoLogout, 
+    botaoCriarHabito
+}
