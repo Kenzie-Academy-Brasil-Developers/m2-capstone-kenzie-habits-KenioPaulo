@@ -41,14 +41,14 @@ botaoEditar.addEventListener("click", () => {
 
 })
 
-document.querySelector("body").addEventListener("click", (event) => {
+document.querySelector(".button_editar").addEventListener("click", (event) => {
     Modais.editarHabito(event.target.parentNode.parentNode.id)
     document.querySelector(".modal_page").style.display = "block"
 })
 
-const body = document.querySelectorAll("body")
+const body = document.querySelectorAll(".button_check")
 body.forEach(elem => {
     elem.addEventListener("click", (event) => {
-        console.log(event.target.parentNode.parentNode.id)
+        // console.log(event.target.parentNode.parentNode.id)
     })
 })
