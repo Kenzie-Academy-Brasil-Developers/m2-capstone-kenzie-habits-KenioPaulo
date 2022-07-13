@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+        
+}
+.corpo_principal {
+    position: fixed;
+    top: 20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 350px;
+    height: 350px;
+    padding: 35px;
+    border-radius: 15px;
+}
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+.cabecalho h3 {
+    display: block;
+    width: 90%;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.cabecalho button {
+    border: none;
+    background-color: white;
+    font-size: large;
+    cursor: pointer;
+}
+.cabecalho button:hover {
+    color: red;
+}
+.corpo_conteudo {
+    display: block;
+    width: 95%;
+    font-size: 0.8em;
+}
+.corpo_conteudo p {
+    margin-top: 15px;
+    font-size: small;
+    font-weight: bold;
+}
+.selecao {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 95%;
+    height: 20px;
+    border: none;
+    background-color: #1b1f27;
+    color: white;
+}
+
+.input_titulo {
+    border: none;
+    width: 95%;
+    height: 30px;
+    background-color: #1b1f27;
+   margin-top: 5px;
+}
+.input_descricao{
+    border: none;
+    width: 95%;
+    height: 60px;
+    background-color: #1b1f27;
+   margin-top: 5px;
+}
+.corpo_btn{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content: space-between;
+}
+.btn_inserir {
+    margin-top: 15px;
+    width: 140px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+.btn_inserir:hover {
+    background-color: red;
+    color: white;
+    border: 1px solid red ;
+
+}
+.btn_alterar:hover {
+    background-color: rgb(36, 36, 199);
+    color: white;
+    border: 1px solid rgb(36, 36, 199) ;
+
+}
+.input_descricao::placeholder,
+.input_titulo::placeholder {
+    padding: 5px;
+}
+.input_descricao::placeholder {
+    text-align: left;
+}
