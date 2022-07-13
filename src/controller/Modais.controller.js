@@ -49,6 +49,7 @@ export default class Modais {
         cabecalhoTitulo.innerText = "Criar Habito"
         btnFechar.innerText = "X"
         conteudoCabecalho.innerText = "Titulo"
+        conteudoDescricao.innerText = "Descrição"
         inputDescricao.name = ""
         inputDescricao.placeholder = "Digitar descrição"
         conteudoCategoria.innerText = "Categoria"
@@ -103,6 +104,7 @@ export default class Modais {
         const option4 = document.createElement("option")
         const option5 = document.createElement("option")
     
+        const status = document.createElement("input")
     
         const btn_excluir = document.createElement("button")
         const btn_alterar = document.createElement("button")
@@ -125,6 +127,9 @@ export default class Modais {
     
             titulo_categoria.classList.add("titulo_categoria")
             selecao.classList.add("selecao")
+
+            btn_alterar.classList.add("btn_alterar")
+            btn_excluir.classList.add("btn_excluir")
     
     //////////////////Valores//////////////////
     
