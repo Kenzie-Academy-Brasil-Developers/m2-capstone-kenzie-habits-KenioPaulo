@@ -71,9 +71,17 @@ export default class Requisicoes {
         .then(response => response.json())
         .then(response => {
             
-            return response.forEach(elem => {
+            response.forEach(elem => {
                 Tabela.criaLinha(elem)
-             })})
+             }
+             )
+             const linha = document.querySelectorAll(".button_editar")
+             linha.forEach(elem => {
+                elem.addEventListener("click", (event) => {
+                    console.log(event.target.parentNode.parentNode.id)
+                 })
+             })
+            })
         .catch(err => console.log(err));
  
     }

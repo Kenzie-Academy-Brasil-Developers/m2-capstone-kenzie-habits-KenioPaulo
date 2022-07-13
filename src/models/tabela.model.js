@@ -1,9 +1,8 @@
 export default class Tabela {
     static tabela      = document.querySelector(".tabela")
-    static linhas      = document.getElementsByClassName("linha")
-    static arrayLinhas = [...Tabela.linhas]
+    // static arrayLinhas = []
 
-    
+
     static criaLinha(objeto) {
  
         const tr          = document.createElement("tr")
@@ -61,5 +60,9 @@ export default class Tabela {
         td.classList.add("td_editar")
         td.append(button)
         return td
+    }
+
+    static botaoEditar() {
+        
     }
 }
