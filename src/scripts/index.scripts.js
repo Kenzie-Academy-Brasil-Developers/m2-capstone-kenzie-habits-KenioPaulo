@@ -25,3 +25,5 @@ const foto = {
 }
 
 Requisicoes.readAll()
+
+
