@@ -166,7 +166,7 @@ export default class Modais {
     
             titulo.append(titulo_texto,input_titulo, titulo_descricao, input_descricao, titulo_categoria,selecao)
     
-            corpoPrincipal.append(cabecalho, titulo)
+            corpoPrincipal.append(cabecalho, titulo,btn_excluir,btn_alterar)
 
             modalPage.appendChild(corpoPrincipal)
 
