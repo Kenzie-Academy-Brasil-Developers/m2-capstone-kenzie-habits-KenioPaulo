@@ -56,6 +56,14 @@ botaoLogout.addEventListener("click", () => {
 
 
 
+const botaoCheck = document.getElementsByClassName("button_check") 
+const listaBotao = [...botaoCheck]
+console.log(listaBotao)
+
+
+
+
+
 
 // const botaoCriar = document.querySelector(".bttn_Criar")
 // botaoCriar.addEventListener('click', () => {
@@ -67,10 +75,6 @@ botaoLogout.addEventListener("click", () => {
 //     Modais.editarHabito()
     
 // })
-
-
-
-
 
 
 
