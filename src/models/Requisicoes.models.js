@@ -59,7 +59,7 @@ export default class Requisicoes {
         .catch(err => console.log(err))
     }
 
-    static async realAll(){
+    static async readAll(){
         return await fetch(`${this.base_url}/habits`,{
             method: "GET",
             headers:{

@@ -1,5 +1,6 @@
 import Requisicoes from "../models/Requisicoes.models.js";
 import Tabela from "../models/tabela.model.js";
+import Modais from "../controller/Modais.controller.js";
 
 const userName     = document.querySelector(".user_name")
 const userImg      = document.querySelector(".img_menu")
@@ -23,11 +24,4 @@ const foto = {
     "usr_image": "https://images.pexels.com/photos/20291/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
 }
 
-Requisicoes.realAll()
-
-// Requisicoes.updateProfile(foto)
-
-// Requisicoes.userLogin(login)
-
-
-
+Requisicoes.readAll()

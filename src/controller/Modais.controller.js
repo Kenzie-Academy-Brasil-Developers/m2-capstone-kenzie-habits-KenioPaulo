@@ -14,7 +14,7 @@ export default class Modais {
         const inputTitulo = document.createElement("input")
 
         const conteudoDescricao = document.createElement("p")
-        const inputDescricao = document.createElement("input")
+        const inputDescricao = document.createElement("textarea")
         
         const conteudoCategoria = document.createElement("p")
         const selecao = document.createElement("select")
@@ -23,6 +23,7 @@ export default class Modais {
         const option2 = document.createElement("option")
         const option3 = document.createElement("option")
         const option4 = document.createElement("option")
+        const option5 = document.createElement("option")
 
         const btnInserir = document.createElement("button")
 
@@ -39,30 +40,37 @@ export default class Modais {
         selecao.classList.add("selecao")
         btnInserir.classList.add("btn_inserir")
 
-        option1.value = "saude"
-        option2.value = "trabalho"
-        option3.value = "lazer"
-        option4.value = "estudos"
+        option1.value = "selecionar"
+        option2.value = "saude"
+        option3.value = "trabalho"
+        option4.value = "lazer"
+        option5.value = "estudos"
 
         cabecalhoTitulo.innerText = "Criar Habito"
         btnFechar.innerText = "X"
         conteudoCabecalho.innerText = "Titulo"
-        inputDescricao.type = "text"
+        conteudoDescricao.innerText = "Descrição"
         inputDescricao.name = ""
         inputDescricao.placeholder = "Digitar descrição"
         conteudoCategoria.innerText = "Categoria"
         selecao.name = "selecionar"
+        btnInserir.innerText = "Inserir"
+        inputTitulo.placeholder = "Digitar título"
 
-        option1.innerText = "Saude"
-        option2.innerText = "Trabalho"
-        option3.innerText = "Lazer"
-        option4.innerText = "Estudos"
+        option1.innerText = "Selecionar Categoria"
+        option2.innerText = "Saude"
+        option3.innerText = "Trabalho"
+        option4.innerText =  "Lazer"
+        option5.innerText ="Estudos"
 
         cabecalhoCriar.append(cabecalhoTitulo, btnFechar)
-        selecao.append(option1, option2, option3, option4)
+        selecao.append(option1, option2, option3, option4,option5)
         corpoConteudo.append(conteudoCabecalho, inputTitulo, conteudoDescricao, inputDescricao, conteudoCategoria, selecao)
         corpoPrincipal.append(cabecalhoCriar, corpoConteudo, btnInserir)
         modalPage.appendChild(corpoPrincipal)
+
+        const styleModais = document.querySelector(".style-modais")
+        styleModais.href = "src/css/styleModais/criarHabito.css"
     }
 
     static editarHabito() {
@@ -90,8 +98,13 @@ export default class Modais {
     
         const titulo_categoria = document.createElement("p")
         const selecao = document.createElement("select")
-        const option = document.createElement("option")
+        const option1 = document.createElement("option")
+        const option2 = document.createElement("option")
+        const option3 = document.createElement("option")
+        const option4 = document.createElement("option")
+        const option5 = document.createElement("option")
     
+        const status = document.createElement("input")
     
         const btn_excluir = document.createElement("button")
         const btn_alterar = document.createElement("button")
@@ -114,12 +127,16 @@ export default class Modais {
     
             titulo_categoria.classList.add("titulo_categoria")
             selecao.classList.add("selecao")
+
+            btn_alterar.classList.add("btn_alterar")
+            btn_excluir.classList.add("btn_excluir")
     
     //////////////////Valores//////////////////
     
             cabecalho_editar.innerText = "Editar"
             input_titulo.type = "text"
             input_titulo.innerText = ""
+            btn_fechar.innerText = "X"
     
             titulo_descricao.innerText = "Descrição"
             input_descricao.type = "text"
@@ -127,19 +144,20 @@ export default class Modais {
     
             titulo_categoria.innerText = "Categoria"
     
-            option.value = "selecionar"
-            option.innerText = "Selecionar Categoria"
-            option.value = "saude"
-            option.innerText = "Saude"
+            option1.value = "selecionar"
+            option1.innerText = "Selecionar Categoria"
+
+            option2.value = "saude"
+            option2.innerText = "Saude"
     
-            option.value = "tabalho"
-            option.innerText = "Trabalho"
+            option3.value = "tabalho"
+            option3.innerText = "Trabalho"
     
-            option.value =  "lazer"
-            option.innerText = "Lazer"
+            option4.value =  "lazer"
+            option4.innerText = "Lazer"
     
-            option.value =  "estudos"
-            option.innerText = "Estudos"
+            option5.value =  "estudos"
+            option5.innerText = "Estudos"
     
             btn_excluir.innerText = "Excluir"
             btn_alterar.innerText = "Salvar Alterações"
@@ -147,15 +165,18 @@ export default class Modais {
     
     //////////////////Append//////////////////////
     
-            selecao.append(option)
+            selecao.append(option1,option2,option3,option4,option5)
     
             cabecalho.append(cabecalho_editar, btn_fechar)
     
             titulo.append(titulo_texto,input_titulo, titulo_descricao, input_descricao, titulo_categoria,selecao)
     
-            corpoPrincipal.append(cabecalho, titulo)
+            corpoPrincipal.append(cabecalho, titulo,btn_excluir,btn_alterar)
 
             modalPage.appendChild(corpoPrincipal)
+
+            const styleModais = document.querySelector(".style-modais")
+            styleModais.href = "src/css/styleModais/editarHabito.css"
         }
     
     
@@ -199,6 +220,9 @@ export default class Modais {
         corpoPrincipal1.append(p, principalNome, principalMensagem, principalImagem, btnSalvar)
         corpoPrincipal.append(corpoBtn, corpoPrincipal1)
         modalPage.appendChild(corpoPrincipal)
+
+        const styleModais = document.querySelector(".style-modais")
+        styleModais.href = "src/css/styleModais/editarPerfil.css"
     }
 
     static excluirHabito() {
@@ -242,5 +266,8 @@ export default class Modais {
         corpoCancelar.append(btnCancelar, btnConfirmar)
         corpoPrincipal.append(corpoBtn, corpoMensagem, corpoCancelar)
         modalPage.appendChild(corpoPrincipal)
+
+        const styleModais = document.querySelector(".style-modais")
+        styleModais.href = "src/css/styleModais/excluirHabito.css"
     }
 }
