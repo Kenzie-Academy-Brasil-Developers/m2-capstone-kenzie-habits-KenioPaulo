@@ -1,3 +1,5 @@
+import Requisicoes from "../models/Requisicoes.models.js"
+
 export default class Modais {
     static botaofechar = document.querySelector(".btn_fechar")
     
@@ -274,12 +276,5 @@ export default class Modais {
     }
 
 
-    static Dados(data){
-        {
-        habit_title = inputTitulo.data
-        habit_description = inputDescricao.data
-        habit_category = selecao.data
-    }
-
-    }
+  
 }

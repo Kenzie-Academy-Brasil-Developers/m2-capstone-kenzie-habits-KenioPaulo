@@ -3,8 +3,7 @@ export default class Tabela {
     static linhas      = document.getElementsByClassName("linha")
     static arrayLinhas = [...Tabela.linhas]
 
-    static botaoEditar = document.querySelector(".button_editar")
-
+    
     static criaLinha(objeto) {
  
         const tr          = document.createElement("tr")
