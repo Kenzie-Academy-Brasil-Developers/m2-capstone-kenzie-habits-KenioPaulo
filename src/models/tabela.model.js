@@ -1,9 +1,8 @@
 export default class Tabela {
     static tabela      = document.querySelector(".tabela")
-    static linhas      = document.getElementsByClassName("linha")
-    static arrayLinhas = [...Tabela.linhas]
+    // static arrayLinhas = []
 
-    
+
     static criaLinha(objeto) {
  
         const tr          = document.createElement("tr")
