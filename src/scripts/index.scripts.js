@@ -17,20 +17,12 @@ window.addEventListener("onload" , () => {
 	
 })
 
-
-
+const login = {
+    "email": "grupo3Nicole@mail.com",
+  "password": "343e627759cd17520661ad15047a3c8a"
+}
 
 Requisicoes.readAll()
-
-// Modais.criarHabito()
-// Modais.editarHabito()
-
-// Modais.botaofechar.addEventListener("click",()=>{
-//     Modais.corpoPrincipal.classList.add("remove")
-// })
-
-
-/////////////////////// funcionado/////////////////////
 
 const botaoCriar = document.querySelector(".bttn_Criar")
 botaoCriar.addEventListener('click', () => {
@@ -41,3 +33,9 @@ botaoCriar.addEventListener('click', () => {
 Tabela.botaoEditar.addEventListener("click", () => {
     Modais.editarHabito()
 })
+
+const foto = {
+    "usr_image": "https://images.pexels.com/photos/20291/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+}
+
+Requisicoes.readAll()
