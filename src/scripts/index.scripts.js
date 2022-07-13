@@ -1,5 +1,6 @@
 import Requisicoes from "../models/Requisicoes.models.js";
 import Tabela from "../models/tabela.model.js";
+import Modais from "../controller/Modais.controller.js";
 
 const userName     = document.querySelector(".user_name")
 const userImg      = document.querySelector(".img_menu")
@@ -17,3 +18,5 @@ window.addEventListener("onload" , () => {
 
 Requisicoes.readAll()
 
+// Modais.criarHabito()
+Modais.editarHabito()
