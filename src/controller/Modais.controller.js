@@ -205,7 +205,7 @@ export default class Modais {
         corpoBtn.classList.add("corpo_btn")
         titulo.classList.add("titulo")
         btnFechar.classList.add("btn_fechar")
-        corpoPrincipal1.classList.add("corpo_principal")
+        corpoPrincipal1.classList.add("corpo_principal1")
         principalNome.classList.add("principal_nome")
         principalMensagem.classList.add("principal_mensagem")
         principalImagem.classList.add("principal_imagem")
@@ -221,8 +221,8 @@ export default class Modais {
         btnSalvar.innerText = "Salvar alteraçoes"
 
         corpoBtn.append(titulo, btnFechar)
-        corpoPrincipal1.append(p, principalNome, principalMensagem, principalImagem, btnSalvar)
-        corpoPrincipal.append(corpoBtn, corpoPrincipal1)
+        corpoPrincipal1.append(p,btnFechar, principalNome, principalMensagem, principalImagem, btnSalvar)
+        corpoPrincipal.append(corpoBtn, btnFechar, corpoPrincipal1)
         modalPage.appendChild(corpoPrincipal)
 
         const styleModais = document.querySelector(".style-modais")
