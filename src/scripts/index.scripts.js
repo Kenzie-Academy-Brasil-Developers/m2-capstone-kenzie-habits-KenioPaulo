@@ -56,14 +56,6 @@ botaoLogout.addEventListener("click", () => {
 
 
 
-const botaoCheck = document.getElementsByClassName("button_check") 
-const listaBotao = [...botaoCheck]
-
-
-
-
-
-
 // const botaoCriar = document.querySelector(".bttn_Criar")
 // botaoCriar.addEventListener('click', () => {
 //     Modais.criarHabito()
@@ -78,5 +70,6 @@ const listaBotao = [...botaoCheck]
 
 
 
-import botaoEditar from "../controller/Botoes.controller.js";
-botaoEditar()
+import {botaoEditarTarefa , botaoCheck } from "../controller/Botoes.controller.js";
+botaoEditarTarefa()
+botaoCheck()
