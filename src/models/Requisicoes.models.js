@@ -1,3 +1,7 @@
+import Tabela from "./tabela.model.js"
+import FormLogin from "./login.model.js"
+import Modais from "../controller/Modais.controller.js"
+
 export default class Requisicoes {
     static base_url = "https://habits-kenzie.herokuapp.com/api"
 
@@ -12,6 +16,14 @@ export default class Requisicoes {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
+        .then(res => {
+            const user = JSON.parse(localStorage.getItem(`@kenzie:user`))
+            user.usr_image = data.usr_image
+            localStorage.setItem(`@kenzie:user`, JSON.stringify(user))
+            console.log(res)
+            document.location.reload(true)
+            return res
+        })
         .catch(err => err)
     }
 
@@ -25,8 +37,12 @@ export default class Requisicoes {
         })
         .then(response => response.json())
         .then(response => {
+            console.log(response)
             localStorage.setItem(`@kenzie:token`, response.token)
             localStorage.setItem(`@kenzie:user`, JSON.stringify(response.response))
+            if(response.message){
+                FormLogin.printErr(response.message)
+            } else {window.location.replace("../../index.html")}
             return response
         })
         .catch(err => console.log(err))
@@ -38,13 +54,14 @@ export default class Requisicoes {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${localStorage.getItem("@kenzie:token")}`
-            }
+            }, 
+            body: JSON.stringify(data)
         })
         .then(response => response.json())
         .catch(err => console.log(err))
     }
 
-    static async realAll(){
+    static async readAll(){
         return await fetch(`${this.base_url}/habits`,{
             method: "GET",
             headers:{
@@ -53,20 +70,28 @@ export default class Requisicoes {
             }
         })
         .then(response => response.json())
-        .catch(err => console.log(err))
+        .then(response => {
+            Tabela.criarThead()
+            response.forEach(elem => {
+                Tabela.criaLinha(elem)
+             })
+             return response
+        })
+        .catch(err => console.log(err));
+ 
     }
 
     static async readByCategory(category){
-            return await fetch(`${this.base_url}/habits/category/${category}`,{
+        return await fetch(`${this.base_url}/habits/category/${category}`,{
 
-                method:"GET",
-                headers:{
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${localStorage.getItem("@kenzie:token")}`
-                }
-            })
-            .then(response => response.json())
-            .catch(err => console.log(err))
+            method:"GET",
+            headers:{
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${localStorage.getItem("@kenzie:token")}`
+            }
+        })
+        .then(response => response.json())
+        .catch(err => console.log(err))
     }
 
     static async updateHabit(habitId, data){
@@ -93,6 +118,7 @@ export default class Requisicoes {
             
         })
         .then(response => response.json())
+        .then(res => alert("hábito concluído com sucesso"))
         .catch(err => console.log(err))
 
     }

@@ -1,0 +1,90 @@
+.corpo_principal {
+    background-color: white;
+    position: fixed;
+    top: 20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 502px;
+    height: 349px;
+    padding: 15px;
+    border-radius: 15px;
+}
+.corpo_btn {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+.corpo_principal1 {
+    margin-top: 37px;
+}
+.btn_fechar {
+    width: 25px;
+    color: black;
+    border: none;
+    padding-left: 5px;
+    background-color: white;
+    font-size: large;
+    cursor: pointer;
+    
+}
+.btn_fechar:hover {
+    color: red;
+}
+.corpo_conteudo {
+    display: block;
+    margin-top: 10%;
+    font-size: 0.8em;
+}
+.corpo_conteudo p {
+    font-size: small;
+    font-weight: bold;
+}
+.corpo_conteudo input {
+    border: none;
+    width: 95%;
+    height: 30px;
+    background-color: #1b1f27;
+   
+}
+.corpo_conteudo input::placeholder {
+    color: #cbd0f7;
+    font-size: 14px;
+    padding-left: 5px;
+}
+.btn_salvar {
+    display: block;
+    margin-top: 8%;
+    width: 95%;
+    height: 30px;
+    color: white;
+    background-color: rgb(36, 36, 199);
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.btn_salvar:hover {
+    background-color: red;
+    color: black;
+    border: 1px solid rgb(36, 36, 199) ;
+}
+.principal_mensagem, .principal_nome > p  {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(var(--grey-1), 1);
+}
+
+.principal_imagem, .principal_nome {
+    background-color: rgba(var(--grey-4), 1);
+    width: 95%;
+    padding: 7px 0 7px 16px;
+    border-radius: 4px;
+}

@@ -7,9 +7,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/root.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <title>Kenzie Habit</title>
+    <link class="style-modais" rel="stylesheet" href="">
   </head>
   <body>
+    <header>
+      <div class="header_kenzieHabit">
+        <h2 class="title_kenzie">KenzieHabit</h2>
+        <figure class="figure_userKenzie dropdown">
+          <img class="img_menu" src="">
+          <div class="dropdown-content">
+            <button class="btn_editar">Editar Perfil</button>
+            <button class="btn_logout">Logout</button>
+          </div>
+        </figure>
+      </div>
+      <div class="header_usuario">
+        <figure class="figure_user">
+          <img class="img_header" src="">
+        </figure>
+        <h2 class="user_name"></h2>
+      </div>
+    </header>
+    <div class="div_tarefas">
+      <div class="nav_Tarefas">
+        <h2 class="title_tarefa">Tarefas</h2>
+        <div class="botoes_tarefas">
+          <button class="bttn_Todos">Todos</button>
+          <button class="bttn_Concluidos">Concluídos</button>
+          <button class="bttn_Criar">Criar</button>
+        </div>
+      </div>
+      
+    </div>
+    
+    <main class="corpo_tabela">
+      <table class="tabela">
+      </table>
+    </main>
+    
+
+    <div class="modal_page"></div>
+    <script type="module" src="src/controller/Botoes.controller.js"></script>
     <script type="module" src="src/scripts/index.scripts.js"></script>
+    <script type="module" src="src/controller/Filtro.controller.js"></script>
+    
   </body>
 </html>

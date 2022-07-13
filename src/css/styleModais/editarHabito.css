@@ -1,0 +1,90 @@
+.corpo_principal {
+    position: fixed;
+    top: 20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 350px;
+    height: 350px;
+    padding: 35px;
+    border-radius: 15px;
+}
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    width: 90%;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+.cabecalho button {
+    border: none;
+    color: rgba(var(--grey-2), 1);
+    background-color: rgba(var(--grey-6), 1);
+    font-size: large;
+    cursor: pointer;
+}
+.cabecalho button:hover {
+    color: red;
+}
+.titulo {
+    display: block;
+    width: 90%;
+    margin-top: 5%;
+    font-size: 0.8em;
+
+}
+.titulo p {
+    font-size: small;
+    font-weight: bold;
+}
+.selecao {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 20px;
+    border: none;
+    background-color: #1b1f27;
+    color: white;
+}
+
+.input_descricao,
+.input_titulo {
+    border: none;
+    width: 95%;
+    height: 30px;
+    background-color: #1b1f27;
+   
+}
+.corpo_btn{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content: space-between;
+}
+.btn_excluir,
+.btn_alterar {
+    width: 140px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+.btn_excluir:hover {
+    background-color: red;
+    color: white;
+    border: 1px solid red ;
+
+}
+.btn_alterar:hover {
+    background-color: rgb(36, 36, 199);
+    color: white;
+    border: 1px solid rgb(36, 36, 199) ;
+
+}
