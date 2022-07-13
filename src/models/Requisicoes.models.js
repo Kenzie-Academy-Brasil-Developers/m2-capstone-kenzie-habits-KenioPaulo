@@ -71,9 +71,13 @@ export default class Requisicoes {
         })
         .then(response => response.json())
         .then(response => {
-            response.forEach(elem => {
+            return response.forEach(elem => {
+                // if(elem.habit_status == true) {
+                //     elem.style.textDecoration = "line-through"
+                // }
                 Tabela.criaLinha(elem)
-             })
+            })
+            
         })
         .catch(err => console.log(err));
  
@@ -116,6 +120,7 @@ export default class Requisicoes {
             
         })
         .then(response => response.json())
+        .then(res => alert("hábito concluído com sucesso"))
         .catch(err => console.log(err))
 
     }

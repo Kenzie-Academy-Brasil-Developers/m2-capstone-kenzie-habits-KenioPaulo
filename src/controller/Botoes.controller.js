@@ -43,16 +43,16 @@ function botaoCheck () {
     check.forEach(elem => {
         elem.addEventListener("click", (event) => {
         const evento = event.target
-        console.log(evento.parentNode.parentNode.id)
+        const id = evento.parentNode.parentNode.id
             if (evento.tagName === "INPUT" && evento.parentNode.parentNode.id !== "") {
                 const filhos = evento.parentNode.parentNode.children 
                 const arrayFilhos = [...filhos]
                 console.log(evento)
                 if(arrayFilhos[1].style.textDecoration !== "line-through"){
+                    // console.log(evento.parentNode.parentNode.id)
                     arrayFilhos[1].style.textDecoration = "line-through"
-                } else if (arrayFilhos[1].style.textDecoration == "line-through"){
-                    arrayFilhos[1].style.textDecoration = "none"
-                }
+                    Requisicoes.completeHabit(id)
+                } 
                         
             }
         })
