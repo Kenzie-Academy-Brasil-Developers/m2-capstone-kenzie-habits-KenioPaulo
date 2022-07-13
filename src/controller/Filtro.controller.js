@@ -1,10 +1,11 @@
 import Requisicoes from "../models/Requisicoes.models.js"
-
+import Modais from "./Modais.controller.js"
 
 
 const botaoTodos = document.querySelector(".bttn_Todos")
 botaoTodos.addEventListener("click", () =>{
-   return  Requisicoes.readAll()
+    
+     Requisicoes.readAll()
 })
 
 function filtrarConcluidos(){

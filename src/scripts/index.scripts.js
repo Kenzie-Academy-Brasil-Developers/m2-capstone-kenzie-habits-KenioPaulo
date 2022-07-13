@@ -16,49 +16,13 @@ userHeader.src     = user.usr_image
 window.addEventListener("onload" , () => {
 	
 })
-
-Requisicoes.readAll()
-
 Requisicoes.readAll()
 const login = {
     "email": "grupo3Nicole@mail.com",
   "password": "343e627759cd17520661ad15047a3c8a"
 }
 
-const botaoEditar = document.querySelector(".btn_editar")
-botaoEditar.addEventListener("click", () => {
-    Modais.editarPerfil()
-    document.querySelector(".modal_page").style.display = "block"
-    const botaoSalvar = document.querySelector('.btn_salvar')
-    botaoSalvar.addEventListener("click", () => {
-        const inputImagem = document.querySelector('.principal_imagem')
-        const foto = {
-            usr_image: ""
-        }
-        if (inputImagem.value !== "") {
-            foto.usr_image = inputImagem.value
-            console.log(foto)
-            Requisicoes.updateProfile(foto)
-        } else {alert("Coloque uma url de uma imagem")}
-    })
 
-})
-
-
-
-
-
-
-
-
-
-const botaoCriar = document.querySelector(".bttn_Criar")
-botaoCriar.addEventListener('click', () => {
-    Modais.criarHabito()
-})
-
-
-Tabela.botaoEditar.addEventListener("click", () => {
-    Modais.editarHabito()
-    
-})
+const foto = {
+    "usr_image": "https://images.pexels.com/photos/20291/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+}
