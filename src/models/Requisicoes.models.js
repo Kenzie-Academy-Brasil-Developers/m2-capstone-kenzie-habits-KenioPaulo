@@ -1,4 +1,5 @@
 import Tabela from "./tabela.model.js"
+import FormLogin from "./login.model.js"
 
 export default class Requisicoes {
     static base_url = "https://habits-kenzie.herokuapp.com/api"
@@ -30,7 +31,7 @@ export default class Requisicoes {
             localStorage.setItem(`@kenzie:token`, response.token)
             localStorage.setItem(`@kenzie:user`, JSON.stringify(response.response))
             if(response.message){
-                alert("Informe um Email e senha correto")
+                FormLogin.printErr(response.message)
             } else {window.location.replace("../../index.html")}
             return response
         })
