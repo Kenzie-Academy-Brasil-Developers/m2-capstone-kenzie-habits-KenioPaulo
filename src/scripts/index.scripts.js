@@ -47,6 +47,7 @@ botaoSalvar.addEventListener("click", () => {
 
 
 
+
 const botaoCriar = document.querySelector(".bttn_Criar")
 botaoCriar.addEventListener('click', () => {
     Modais.criarHabito()
@@ -55,6 +56,7 @@ botaoCriar.addEventListener('click', () => {
 
 Tabela.botaoEditar.addEventListener("click", () => {
     Modais.editarHabito()
+    
 })
 
 
