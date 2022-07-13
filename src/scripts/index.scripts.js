@@ -17,7 +17,7 @@ userHeader.src     = user.usr_image
 	
 // })
 
-Requisicoes.readAll()
+await Requisicoes.readAll()
 
 // ate aqui
  
@@ -58,7 +58,6 @@ botaoLogout.addEventListener("click", () => {
 
 const botaoCheck = document.getElementsByClassName("button_check") 
 const listaBotao = [...botaoCheck]
-console.log(listaBotao)
 
 
 
