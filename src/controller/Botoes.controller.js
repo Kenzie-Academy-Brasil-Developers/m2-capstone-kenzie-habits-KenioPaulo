@@ -20,14 +20,6 @@ botaoCriar.addEventListener('click', () => {
 
 
 
-
-
-
-Tabela.botaoEditar.addEventListener("click", () => {
-    Modais.editarHabito()
-    
-})
-
 const botaoEditar = document.querySelector(".btn_editar")
 botaoEditar.addEventListener("click", () => {
     Modais.editarPerfil()
