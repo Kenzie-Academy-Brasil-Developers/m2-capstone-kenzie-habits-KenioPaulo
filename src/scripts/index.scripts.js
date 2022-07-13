@@ -15,5 +15,5 @@ window.addEventListener("onload" , () => {
 })
 
 
-Requisicoes.realAll()
+Requisicoes.readAll()
 
