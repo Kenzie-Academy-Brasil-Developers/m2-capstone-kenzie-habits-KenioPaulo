@@ -2,6 +2,18 @@ export default class Tabela {
     static tabela      = document.querySelector(".tabela")
     // static arrayLinhas = []
 
+    static criarThead() {
+        this.tabela.innerText = ""
+        this.tabela.insertAdjacentHTML("afterbegin", `
+        <thead>
+          <th class="status">Status</th>
+          <th class="titulo">Título</th>
+          <th class="descricao">Descrição</th>
+          <th class="categoria">Categoria</th>
+          <th class="editar">Editar</th>
+        </thead>
+        `)
+    }
 
     static criaLinha(objeto) {
  

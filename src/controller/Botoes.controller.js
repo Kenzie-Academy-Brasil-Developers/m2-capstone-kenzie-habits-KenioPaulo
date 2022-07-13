@@ -2,6 +2,19 @@ import Requisicoes from "../models/Requisicoes.models.js";
 import Tabela from "../models/tabela.model.js";
 import Modais from "../controller/Modais.controller.js";
 
+const botaoCriar = document.querySelector(".bttn_Criar")
+botaoCriar.addEventListener('click', () => {
+    Modais.criarHabito()
+    document.querySelector(".modal_page").style.display = "block"
+    document.querySelector(".btn_fechar").addEventListener("click", ()=>{
+        document.querySelector(".modal_page").style.display = "none"
+    })
+    document.querySelector(".btn_inserir").addEventListener("click", () =>{
+    
+        
+        Requisicoes.createHabit()
+    })
+})
 
 function botaoEditarPerfil() {
     const botaoEditar = document.querySelector(".btn_editar")
@@ -83,15 +96,29 @@ function botaoCheck () {
 
 function botaoEditarTarefa() {
     const editar = document.querySelectorAll(".button_editar")
-    console.log(editar)
     editar.forEach(elem => {
         elem.addEventListener("click", (event) => {
+            const id = event.target.parentNode.parentNode.id
+            
             Modais.editarHabito(event.target.parentNode.parentNode.id)
             document.querySelector(".modal_page").style.display = "block"
             document.querySelector(".btn_fechar").addEventListener("click", () => {
                 const modal = document.querySelector(".modal_page")
                 modal.innerText = ""
                 modal.style.display = "none"
+            })
+            document.querySelector(".btn_excluir").addEventListener("click", () =>{
+                Modais.excluirHabito()
+                document.querySelector(".modal_page").style.display = "block"
+                document.querySelector(".btn_cancelar").addEventListener("click", () =>{
+                    document.querySelector(".modal_page").style.display = "none" 
+                })
+                document.querySelector(".btn_sim").addEventListener("click", ()=>{
+                        
+                        Requisicoes.deleteHabit(id)
+                        Requisicoes.readAll()
+                        document.querySelector(".modal_page").style.display = "none"
+                })
             })
         })
     })
