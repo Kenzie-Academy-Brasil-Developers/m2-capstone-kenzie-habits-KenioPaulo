@@ -131,6 +131,7 @@ export default class Modais {
             cabecalho_editar.innerText = "Editar"
             input_titulo.type = "text"
             input_titulo.innerText = ""
+            btn_fechar.innerText = "X"
     
             titulo_descricao.innerText = "Descrição"
             input_descricao.type = "text"

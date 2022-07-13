@@ -18,5 +18,5 @@ window.addEventListener("onload" , () => {
 
 Requisicoes.realAll()
 
-Modais.criarHabito()
-// Modais.editarHabito()
+// Modais.criarHabito()
+Modais.editarHabito()
