@@ -24,15 +24,6 @@ const login = {
 
 Requisicoes.readAll()
 
-// Modais.criarHabito()
-// Modais.editarHabito()
-
-// Modais.botaofechar.addEventListener("click",()=>{
-//     Modais.corpoPrincipal.classList.add("remove")
-// })
-
-
-/////////////////////// funcionado/////////////////////
 
 const botaoCriar = document.querySelector(".bttn_Criar")
 botaoCriar.addEventListener('click', () => {
@@ -42,6 +33,7 @@ botaoCriar.addEventListener('click', () => {
 
 Tabela.botaoEditar.addEventListener("click", () => {
     Modais.editarHabito()
+    
 })
 
 const foto = {
