@@ -102,3 +102,11 @@ form [type="submit"]:hover {
     color: black;
     border: 1px solid rgb(36, 36, 199) ;
 }
+
+.erro {
+    color: rgba(var(--err-1), 1);
+    margin-top: 3px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}

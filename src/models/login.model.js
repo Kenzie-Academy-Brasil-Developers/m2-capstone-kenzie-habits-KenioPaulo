@@ -18,4 +18,8 @@ export default class FormLogin {
         await Requisicoes.userLogin(data)
     }
 
+    static async printErr(err) {
+        const erro = document.querySelector(".erro")
+        erro.innerText = err
+    }
 }
