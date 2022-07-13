@@ -10,6 +10,49 @@ header{
     width: 100vw;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(var(--grey-5));
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    margin-left: -100px;
+    padding-bottom: 54px;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+    align-content: flex-end;
+    padding-top: 20px;
+}
+
+.btn_editar, .btn_logout {
+    justify-self: center;
+    border: none;
+    background-color: rgb(var(--brand-1));
+    color: #FFFFFF;
+    width: 90px;
+    height: 24px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 3px;
+    /* margin-left: 20px;
+    margin-bottom: 10px; */
+
+}
+
 .header_kenzieHabit{
     display: flex;
     justify-content: space-between;
@@ -141,6 +184,11 @@ td {
 
 }
 
+.button_check {
+    cursor: pointer;
+}
+
+
 @media screen and (max-width: 900px){
 
     .descricao, .categoria, .td_categoria {
@@ -164,10 +212,6 @@ td {
 
 @media screen and (min-width: 900px ) {
 
-    /* img {
-        width: 10px;
-        height: 10px;
-    } */
 
     .corpo_tabela {
         display: flex;
@@ -230,5 +274,9 @@ td {
     bottom: 0;
     left: 0;
     right: 0;
-   background-color: rgba(var(--grey-1), 0.7);
+    background-color: rgba(var(--grey-1), 0.7);
+}
+
+.remove{
+    display: none;
 }
