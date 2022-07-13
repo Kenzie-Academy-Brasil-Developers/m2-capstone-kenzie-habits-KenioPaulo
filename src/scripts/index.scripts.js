@@ -3,7 +3,7 @@ import Tabela from "../models/tabela.model.js";
 import Modais from "../controller/Modais.controller.js";
 
 
-
+// Fazer função ao carregar a pagina rodar isso tudo
 const userName     = document.querySelector(".user_name ")
 const userImg      = document.querySelector(".img_menu")
 const userHeader   = document.querySelector(".img_header")
