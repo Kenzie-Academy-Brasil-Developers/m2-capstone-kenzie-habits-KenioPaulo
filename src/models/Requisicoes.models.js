@@ -74,12 +74,6 @@ export default class Requisicoes {
             response.forEach(elem => {
                 Tabela.criaLinha(elem)
             })
-            const body = document.querySelectorAll("body")
-            body.forEach(elem => {
-                elem.addEventListener("click", (event) => {
-                    console.log(event.target.parentNode.parentNode.id)
-                })
-            })
         
         })
         .catch(err => console.log(err));
