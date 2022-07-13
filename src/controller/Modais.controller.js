@@ -231,7 +231,7 @@ export default class Modais {
 
     static excluirHabito() {
         const modalPage = document.querySelector(".modal_page")
-        // modalPage.innerText = ""
+        modalPage.innerText = ""
        
 
         const corpoPrincipal = document.createElement("div")
@@ -254,7 +254,7 @@ export default class Modais {
         btnExcluir.classList.add("btn_excluir")
         corpoMensagem.classList.add("corpo_mensagem")
         tituloMensagem.classList.add("mensagem_titulo")
-        tituloMensagem.innerText ="Certeza que deseja excluir esse habito?"
+        
         avisoMensagem.classList.add("mensagem_aviso")
         corpoCancelar.classList.add("corpo_cancelar")
         btnCancelar.classList.add("btn_cancelar")
@@ -272,7 +272,7 @@ export default class Modais {
         corpoPrincipal.append(corpoBtn, corpoMensagem, corpoCancelar)
         modalPage.append(corpoPrincipal)
         
-            console.log(modalPage)
+            
         const styleModais = document.querySelector(".style-modais")
         styleModais.href = "src/css/styleModais/excluirHabito.css"
     }
