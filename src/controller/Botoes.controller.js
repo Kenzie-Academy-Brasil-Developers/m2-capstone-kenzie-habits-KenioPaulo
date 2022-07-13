@@ -38,37 +38,37 @@ botaoEditar.addEventListener("click", () => {
 
 
 
-
-
-body.forEach(elem => {
-    elem.addEventListener("click", (event) => {
-    const evento = event.target
-    console.log(evento.parentNode.parentNode.id)
-        if (evento.tagName === "INPUT" && evento.parentNode.parentNode.id !== "") {
-            const filhos = evento.parentNode.parentNode.children 
-            const arrayFilhos = [...filhos]
-            console.log(evento)
-            if(arrayFilhos[1].style.textDecoration !== "line-through"){
-                arrayFilhos[1].style.textDecoration = "line-through"
-            } else if (arrayFilhos[1].style.textDecoration == "line-through"){
-                arrayFilhos[1].style.textDecoration = "none"
+export default function botaoCheck () {
+    const check = document.querySelectorAll(".button_check")
+    check.forEach(elem => {
+        elem.addEventListener("click", (event) => {
+        const evento = event.target
+        console.log(evento.parentNode.parentNode.id)
+            if (evento.tagName === "INPUT" && evento.parentNode.parentNode.id !== "") {
+                const filhos = evento.parentNode.parentNode.children 
+                const arrayFilhos = [...filhos]
+                console.log(evento)
+                if(arrayFilhos[1].style.textDecoration !== "line-through"){
+                    arrayFilhos[1].style.textDecoration = "line-through"
+                } else if (arrayFilhos[1].style.textDecoration == "line-through"){
+                    arrayFilhos[1].style.textDecoration = "none"
+                }
+                        
             }
-                       
-        }
+        })
     })
-})
+}
 
 
 
-
-document.querySelector(".button_editar").addEventListener("click", (event) => {
-    Modais.editarHabito(event.target.parentNode.parentNode.id)
-    document.querySelector(".modal_page").style.display = "block"
-})
-
-const body = document.querySelectorAll(".button_check")
-body.forEach(elem => {
-    elem.addEventListener("click", (event) => {
-        // console.log(event.target.parentNode.parentNode.id)
+export default function botoaoEditar() {
+    const editar = document.querySelectorAll(".button_editar")
+    console.log(editar)
+    editar.forEach(elem => {
+        elem.addEventListener("click", (event) => {
+            Modais.editarHabito(event.target.parentNode.parentNode.id)
+            document.querySelector(".modal_page").style.display = "block"
+            document.querySelector("")
+        })
     })
-})
+}
