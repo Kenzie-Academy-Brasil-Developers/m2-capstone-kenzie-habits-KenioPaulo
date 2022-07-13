@@ -4,8 +4,8 @@ import Modais from "./Modais.controller.js"
 
 const botaoTodos = document.querySelector(".bttn_Todos")
 botaoTodos.addEventListener("click", () =>{
+    Requisicoes.readAll()
     
-     Requisicoes.readAll()
 })
 
 function filtrarConcluidos(){
