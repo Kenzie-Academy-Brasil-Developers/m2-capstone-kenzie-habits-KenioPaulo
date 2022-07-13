@@ -100,11 +100,12 @@ function botaoCheck () {
 
 function botaoEditarTarefa() {
     const editar = document.querySelectorAll(".button_editar")
+    
     editar.forEach(elem => {
         elem.addEventListener("click", (event) => {
             const id = event.target.parentNode.parentNode.id
-            
-            Modais.editarHabito(event.target.parentNode.parentNode.id)
+            console.log(id)
+            Modais.editarHabito(id)
             document.querySelector(".modal_page").style.display = "block"
             document.querySelector(".btn_fechar").addEventListener("click", () => {
                 const modal = document.querySelector(".modal_page")
@@ -125,6 +126,7 @@ function botaoEditarTarefa() {
                 })
             })
         })
+    
     })
 }
 
