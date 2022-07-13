@@ -269,13 +269,10 @@ td {
 }
 
 .modal_page{
-<<<<<<< HEAD
-    /* position: fixed; */
-=======
     position: fixed;
     display: none;
->>>>>>> 21f8ef0f7870bb738703ad450dcd40d2d60a899d
     top: 0;
+
     bottom: 0;
     left: 0;
     right: 0;

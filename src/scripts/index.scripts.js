@@ -31,16 +31,18 @@ const login = {
 const botaoEditar = document.querySelector(".btn_editar")
 botaoEditar.addEventListener("click", () => {
     Modais.editarPerfil()
+    document.querySelector(".modal_page").style.display = "block"
+    const botaoSalvar = document.querySelector('.btn_salvar')
+    botaoSalvar.addEventListener("click", () => {
+        alert("botao correto")
+        Requisicoes.updateProfile(foto)
+    })
+
 })
 
 const foto = {
     "usr_image": "https://https://i.pinimg.com/564x/74/45/6c/74456c2bd47666329b9dee5dcad4ece7.jpg"
 }
-const botaoSalvar = document.querySelector('.btn_salvar')
-botaoSalvar.addEventListener("click", () => {
-    alert("botao correto")
-    Requisicoes.updateProfile(foto)
-})
 
 
 
