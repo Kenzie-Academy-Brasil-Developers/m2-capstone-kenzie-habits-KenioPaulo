@@ -14,7 +14,7 @@ export default class Modais {
         const inputTitulo = document.createElement("input")
 
         const conteudoDescricao = document.createElement("p")
-        const inputDescricao = document.createElement("input")
+        const inputDescricao = document.createElement("textarea")
         
         const conteudoCategoria = document.createElement("p")
         const selecao = document.createElement("select")
@@ -49,11 +49,12 @@ export default class Modais {
         cabecalhoTitulo.innerText = "Criar Habito"
         btnFechar.innerText = "X"
         conteudoCabecalho.innerText = "Titulo"
-        inputDescricao.type = "text"
         inputDescricao.name = ""
         inputDescricao.placeholder = "Digitar descrição"
         conteudoCategoria.innerText = "Categoria"
         selecao.name = "selecionar"
+        btnInserir.innerText = "Inserir"
+        inputTitulo.placeholder = "Digitar título"
 
         option1.innerText = "Selecionar Categoria"
         option2.innerText = "Saude"
@@ -66,6 +67,9 @@ export default class Modais {
         corpoConteudo.append(conteudoCabecalho, inputTitulo, conteudoDescricao, inputDescricao, conteudoCategoria, selecao)
         corpoPrincipal.append(cabecalhoCriar, corpoConteudo, btnInserir)
         modalPage.appendChild(corpoPrincipal)
+
+        const styleModais = document.querySelector(".style-modais")
+        styleModais.href = "src/css/styleModais/criarHabito.css"
     }
 
     static editarHabito() {
@@ -164,6 +168,9 @@ export default class Modais {
             corpoPrincipal.append(cabecalho, titulo)
 
             modalPage.appendChild(corpoPrincipal)
+
+            const styleModais = document.querySelector(".style-modais")
+            styleModais.href = "src/css/styleModais/editarHabito.css"
         }
     
     
@@ -207,6 +214,9 @@ export default class Modais {
         corpoPrincipal1.append(p, principalNome, principalMensagem, principalImagem, btnSalvar)
         corpoPrincipal.append(corpoBtn, corpoPrincipal1)
         modalPage.appendChild(corpoPrincipal)
+
+        const styleModais = document.querySelector(".style-modais")
+        styleModais.href = "src/css/styleModais/editarPerfil.css"
     }
 
     static excluirHabito() {
@@ -250,5 +260,8 @@ export default class Modais {
         corpoCancelar.append(btnCancelar, btnConfirmar)
         corpoPrincipal.append(corpoBtn, corpoMensagem, corpoCancelar)
         modalPage.appendChild(corpoPrincipal)
+
+        const styleModais = document.querySelector(".style-modais")
+        styleModais.href = "src/css/styleModais/excluirHabito.css"
     }
 }
