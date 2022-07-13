@@ -10,11 +10,7 @@ botaoCriar.addEventListener('click', () => {
         document.querySelector(".modal_page").style.display = "none"
     })
     document.querySelector(".btn_inserir").addEventListener("click", () =>{
-        const data = {
-            habit_title: "",
-            habit_description: "",
-            habit_category: ""
-        }
+    
         
         Requisicoes.createHabit()
     })
@@ -65,15 +61,30 @@ function botaoCheck () {
 
 function botaoEditarTarefa() {
     const editar = document.querySelectorAll(".button_editar")
-    console.log(editar)
+    
     editar.forEach(elem => {
         elem.addEventListener("click", (event) => {
+            const id = event.target.parentNode.parentNode.id
+            
             Modais.editarHabito(event.target.parentNode.parentNode.id)
             document.querySelector(".modal_page").style.display = "block"
             document.querySelector(".btn_fechar").addEventListener("click", () => {
                 const modal = document.querySelector(".modal_page")
                 modal.innerText = ""
                 modal.style.display = "none"
+            })
+            document.querySelector(".btn_excluir").addEventListener("click", () =>{
+                Modais.excluirHabito()
+                document.querySelector(".modal_page").style.display = "block"
+                document.querySelector(".btn_cancelar").addEventListener("click", () =>{
+                    document.querySelector(".modal_page").style.display = "none" 
+                })
+                document.querySelector(".btn_sim").addEventListener("click", ()=>{
+                        
+                        Requisicoes.deleteHabit(id)
+                        Requisicoes.readAll()
+                        document.querySelector(".modal_page").style.display = "none"
+                })
             })
         })
     })
