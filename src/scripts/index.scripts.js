@@ -1,31 +1,19 @@
 import Requisicoes from "../models/Requisicoes.models.js";
 import Tabela from "../models/tabela.model.js";
 
-// console.log(Tabela.arrayLinhas)
+const userName     = document.querySelector(".user_name")
+const userImg      = document.querySelector(".img_menu")
+const userHeader   = document.querySelector(".img_header")
+const user         = JSON.parse(localStorage.getItem("@kenzie:user"))
+userImg.src        = user.usr_image
+userName.innerText = user.usr_name
+userHeader.src     = user.usr_image
 
+console.log(user)
+window.addEventListener("onload" , () => {
+	
+})
 
-
-
-
-
- const arrayObjeto = [
-	{
-		habit_title: "bater ponto corretamente",
-		habit_description: "bater ponto todos os dias nos horários corretos",
-		habit_category: "trabalho"
-	},
-	{
-		habit_title: "Estudar 4 horas por dia",
-		habit_description: "focar nos estudos durante no mínimo 4 horas por dia",
-		habit_category: "trabalho"
-	},
-	{
-		habit_title: "Jogar vôlei aos domingos",
-		habit_description: "Jogar vôlei todo domingo",
-		habit_category: "lazer"
-	}
-]
 
 Requisicoes.realAll()
 
-// arrayObjeto
