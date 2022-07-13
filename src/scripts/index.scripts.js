@@ -39,3 +39,5 @@ const foto = {
 }
 
 Requisicoes.readAll()
+
+
