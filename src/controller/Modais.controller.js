@@ -1,6 +1,6 @@
 export default class Modais {
     static botaofechar = document.querySelector(".btn_fechar")
-    static corpoPrincipal = document.querySelector(".corpo_principal")
+    
     static criarHabito() {
         const modalPage = document.querySelector(".modal_page")
         modalPage.innerText = ""
@@ -271,5 +271,15 @@ export default class Modais {
 
         const styleModais = document.querySelector(".style-modais")
         styleModais.href = "src/css/styleModais/excluirHabito.css"
+    }
+
+
+    static Dados(data){
+        {
+        habit_title = inputTitulo.data
+        habit_description = inputDescricao.data
+        habit_category = selecao.data
+    }
+
     }
 }
