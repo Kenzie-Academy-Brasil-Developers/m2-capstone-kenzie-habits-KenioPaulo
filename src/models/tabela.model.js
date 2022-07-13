@@ -62,4 +62,8 @@ export default class Tabela {
         td.append(button)
         return td
     }
+
+    static botaoEditar() {
+        
+    }
 }
