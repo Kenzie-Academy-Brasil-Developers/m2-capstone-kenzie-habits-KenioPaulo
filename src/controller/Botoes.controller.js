@@ -43,3 +43,8 @@ botaoEditar.addEventListener("click", () => {
     })
 
 })
+
+document.querySelector("body").addEventListener("click", (event) => {
+    Modais.editarHabito(event.target.parentNode.parentNode.id)
+    document.querySelector(".modal_page").style.display = "block"
+})
