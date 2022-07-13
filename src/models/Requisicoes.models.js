@@ -1,5 +1,6 @@
 import Tabela from "./tabela.model.js"
 import FormLogin from "./login.model.js"
+import Modais from "../controller/Modais.controller.js"
 
 export default class Requisicoes {
     static base_url = "https://habits-kenzie.herokuapp.com/api"
@@ -70,18 +71,10 @@ export default class Requisicoes {
         })
         .then(response => response.json())
         .then(response => {
-            
             response.forEach(elem => {
                 Tabela.criaLinha(elem)
-             }
-             )
-             const linha = document.querySelectorAll(".button_editar")
-             linha.forEach(elem => {
-                elem.addEventListener("click", (event) => {
-                    console.log(event.target.parentNode.parentNode.id)
-                 })
              })
-            })
+        })
         .catch(err => console.log(err));
  
     }

@@ -30,6 +30,7 @@
     background-color: white;
     font-size: large;
     cursor: pointer;
+    
 }
 .btn_fechar:hover {
     color: red;
