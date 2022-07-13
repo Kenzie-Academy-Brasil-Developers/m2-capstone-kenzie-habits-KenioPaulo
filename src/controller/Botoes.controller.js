@@ -65,7 +65,6 @@ function botaoCheck () {
 
 function botaoEditarTarefa() {
     const editar = document.querySelectorAll(".button_editar")
-    console.log(editar)
     editar.forEach(elem => {
         elem.addEventListener("click", (event) => {
             Modais.editarHabito(event.target.parentNode.parentNode.id)

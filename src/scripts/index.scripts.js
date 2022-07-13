@@ -53,3 +53,5 @@ import {botaoEditarTarefa , botaoCheck, botaoEditar } from "../controller/Botoes
 botaoEditarTarefa()
 botaoCheck()
 botaoEditar()
+import { btnConcluidos } from "../controller/Filtro.controller.js";
+btnConcluidos()

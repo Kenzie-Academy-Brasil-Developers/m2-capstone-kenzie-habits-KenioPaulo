@@ -71,9 +71,11 @@ export default class Requisicoes {
         })
         .then(response => response.json())
         .then(response => {
+            Tabela.criarThead()
             response.forEach(elem => {
                 Tabela.criaLinha(elem)
              })
+             return response
         })
         .catch(err => console.log(err));
  
