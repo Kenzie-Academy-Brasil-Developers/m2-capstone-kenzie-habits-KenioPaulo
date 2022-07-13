@@ -205,7 +205,7 @@ export default class Modais {
         corpoBtn.classList.add("corpo_btn")
         titulo.classList.add("titulo")
         btnFechar.classList.add("btn_fechar")
-        corpoPrincipal1.classList.add("corpo_principal")
+        corpoPrincipal1.classList.add("corpo_principal1")
         principalNome.classList.add("principal_nome")
         principalMensagem.classList.add("principal_mensagem")
         principalImagem.classList.add("principal_imagem")
