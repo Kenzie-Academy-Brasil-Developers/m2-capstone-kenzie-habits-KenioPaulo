@@ -20,20 +20,22 @@ botaoCriar.addEventListener('click', () => {
     })
 })
 
-const botaoEditar = document.querySelector(".btn_editar")
-botaoEditar.addEventListener("click", () => {
-    Modais.editarPerfil()
-    document.querySelector(".modal_page").style.display = "block"
-    document.querySelector(".btn_fechar").addEventListener("click", () => {
-        document.querySelector(".modal_page").style.display = "none"
-    }) 
-    const botaoSalvar = document.querySelector('.btn_salvar')
-    botaoSalvar.addEventListener("click", () => {
-        alert("botao correto")
-        Requisicoes.updateProfile(foto)
+function botaoEditar() {
+    const botaoEditar = document.querySelector(".btn_editar")
+    botaoEditar.addEventListener("click", () => {
+        Modais.editarPerfil()
+        document.querySelector(".modal_page").style.display = "block"
+        document.querySelector(".btn_fechar").addEventListener("click", () => {
+            document.querySelector(".modal_page").style.display = "none"
+        }) 
+        const botaoSalvar = document.querySelector('.btn_salvar')
+        botaoSalvar.addEventListener("click", () => {
+            alert("botao correto")
+            Requisicoes.updateProfile(foto)
+        })
+    
     })
-
-})
+}
 
 
 
@@ -78,4 +80,4 @@ function botaoEditarTarefa() {
 }
 
 
-export {botaoCheck , botaoEditarTarefa}
+export {botaoCheck , botaoEditarTarefa, botaoEditar}
