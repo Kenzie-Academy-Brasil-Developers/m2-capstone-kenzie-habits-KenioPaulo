@@ -2,9 +2,6 @@ import Requisicoes from "../models/Requisicoes.models.js";
 import Tabela from "../models/tabela.model.js";
 import Modais from "../controller/Modais.controller.js";
 
-const body = document.querySelector("body")
-
-
 const botaoCriar = document.querySelector(".bttn_Criar")
 botaoCriar.addEventListener('click', () => {
     Modais.criarHabito()
@@ -47,4 +44,11 @@ botaoEditar.addEventListener("click", () => {
 document.querySelector("body").addEventListener("click", (event) => {
     Modais.editarHabito(event.target.parentNode.parentNode.id)
     document.querySelector(".modal_page").style.display = "block"
+})
+
+const body = document.querySelectorAll("body")
+body.forEach(elem => {
+    elem.addEventListener("click", (event) => {
+        console.log(event.target.parentNode.parentNode.id)
+    })
 })
