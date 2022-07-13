@@ -41,10 +41,17 @@ botaoEditar.addEventListener("click", () => {
 
 })
 
-document.querySelector(".button_editar").addEventListener("click", (event) => {
-    Modais.editarHabito(event.target.parentNode.parentNode.id)
-    document.querySelector(".modal_page").style.display = "block"
-})
+export default function botoaoEditar() {
+    const editar = document.querySelectorAll(".button_editar")
+    console.log(editar)
+    editar.forEach(elem => {
+        elem.addEventListener("click", (event) => {
+            Modais.editarHabito(event.target.parentNode.parentNode.id)
+            document.querySelector(".modal_page").style.display = "block"
+            document.querySelector("")
+        })
+    })
+}
 
 const body = document.querySelectorAll(".button_check")
 body.forEach(elem => {

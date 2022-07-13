@@ -78,3 +78,5 @@ const listaBotao = [...botaoCheck]
 
 
 
+import botaoEditar from "../controller/Botoes.controller.js";
+botaoEditar()
