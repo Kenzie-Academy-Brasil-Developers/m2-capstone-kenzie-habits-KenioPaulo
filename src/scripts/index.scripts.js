@@ -34,15 +34,20 @@ botaoEditar.addEventListener("click", () => {
     document.querySelector(".modal_page").style.display = "block"
     const botaoSalvar = document.querySelector('.btn_salvar')
     botaoSalvar.addEventListener("click", () => {
-        alert("botao correto")
-        Requisicoes.updateProfile(foto)
+        const inputImagem = document.querySelector('.principal_imagem')
+        const foto = {
+            usr_image: ""
+        }
+        if (inputImagem.value !== "") {
+            foto.usr_image = inputImagem.value
+            console.log(foto)
+            Requisicoes.updateProfile(foto)
+        } else {alert("Coloque uma url de uma imagem")}
     })
 
 })
 
-const foto = {
-    "usr_image": "https://https://i.pinimg.com/564x/74/45/6c/74456c2bd47666329b9dee5dcad4ece7.jpg"
-}
+
 
 
 
