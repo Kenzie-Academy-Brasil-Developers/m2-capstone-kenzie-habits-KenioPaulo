@@ -12,21 +12,18 @@ userImg.src        = user.usr_image
 userName.innerText = user.usr_name
 userHeader.src     = user.usr_image
 
-console.log(user)
+
 window.addEventListener("onload" , () => {
 	
 })
 
 Requisicoes.readAll()
 
-// até aqui
-
+Requisicoes.readAll()
 const login = {
     "email": "grupo3Nicole@mail.com",
   "password": "343e627759cd17520661ad15047a3c8a"
 }
-
-
 
 const botaoEditar = document.querySelector(".btn_editar")
 botaoEditar.addEventListener("click", () => {
@@ -52,10 +49,6 @@ const botaoLogout = document.querySelector(".btn_logout")
 botaoLogout.addEventListener("click", () => {
     
 })
-
-
-
-
 
 
 
