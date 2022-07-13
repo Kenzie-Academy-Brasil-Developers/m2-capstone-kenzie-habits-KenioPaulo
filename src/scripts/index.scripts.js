@@ -48,23 +48,28 @@ botaoEditar.addEventListener("click", () => {
 })
 
 
-
-
-
-
-
-
-
-const botaoCriar = document.querySelector(".bttn_Criar")
-botaoCriar.addEventListener('click', () => {
-    Modais.criarHabito()
-})
-
-
-Tabela.botaoEditar.addEventListener("click", () => {
-    Modais.editarHabito()
+const botaoLogout = document.querySelector(".btn_logout")
+botaoLogout.addEventListener("click", () => {
     
 })
+
+
+
+
+
+
+
+
+// const botaoCriar = document.querySelector(".bttn_Criar")
+// botaoCriar.addEventListener('click', () => {
+//     Modais.criarHabito()
+// })
+
+
+// Tabela.botaoEditar.addEventListener("click", () => {
+//     Modais.editarHabito()
+    
+// })
 
 
 
