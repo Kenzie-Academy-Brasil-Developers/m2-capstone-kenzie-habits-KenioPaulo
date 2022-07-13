@@ -71,13 +71,11 @@ export default class Requisicoes {
         })
         .then(response => response.json())
         .then(response => {
-            return response.forEach(elem => {
-                // if(elem.habit_status == true) {
-                //     elem.style.textDecoration = "line-through"
-                // }
+            Tabela.criarThead()
+            response.forEach(elem => {
                 Tabela.criaLinha(elem)
-            })
-            
+             })
+             return response
         })
         .catch(err => console.log(err));
  

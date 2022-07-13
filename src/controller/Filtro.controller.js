@@ -1,6 +1,7 @@
 import Requisicoes from "../models/Requisicoes.models.js"
 import Modais from "./Modais.controller.js"
-
+import { botaoCheck, botaoEditar, botaoEditarTarefa } from "./Botoes.controller.js"
+import Tabela from "../models/tabela.model.js"
 
 const botaoTodos = document.querySelector(".bttn_Todos")
 botaoTodos.addEventListener("click", () =>{
@@ -8,18 +9,28 @@ botaoTodos.addEventListener("click", () =>{
     
 })
 
-function filtrarConcluidos(){
-    const filtroTrue = Requisicoes.realAll().filter((event) => {
+async function filtrarConcluidos(){
+    const filtroTrue = await Requisicoes.readAll()
+    filtroTrue.filter((event) => {
         return event.habit_status === true
     })
     return filtroTrue
-    console.log(filtroTrue)
 }
 
-const botaoConcluidos = document.querySelector(".bttn_Concluidos")
-botaoConcluidos.addEventListener("click", event =>{
-    const listaConcluidos = filtrarConcluidos()
-    readAll(listaConcluidos)
+function btnConcluidos() {
+    const botaoConcluidos = document.querySelector(".bttn_Concluidos")
+
+    botaoConcluidos.addEventListener("click", async (event) =>{
+    const listaConcluidos = await filtrarConcluidos()
+    document.querySelector(".tabela").innerText = ""
+    Tabela.criarThead()
+    listaConcluidos.forEach(elem => {
+        Tabela.criaLinha(elem)
+     })
+    botaoCheck()
+    botaoEditar()
+    botaoEditarTarefa()
 })
 
-  
+}
+export {btnConcluidos}
