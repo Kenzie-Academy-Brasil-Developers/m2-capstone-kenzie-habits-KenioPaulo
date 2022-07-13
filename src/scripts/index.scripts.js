@@ -22,12 +22,6 @@ const login = {
   "password": "343e627759cd17520661ad15047a3c8a"
 }
 
-const foto = {
-    "usr_image": "https://images.pexels.com/photos/20291/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
-}
-
-
-
 Requisicoes.readAll()
 
 // Modais.criarHabito()
@@ -49,3 +43,11 @@ botaoCriar.addEventListener('click', () => {
 Tabela.botaoEditar.addEventListener("click", () => {
     Modais.editarHabito()
 })
+
+const foto = {
+    "usr_image": "https://images.pexels.com/photos/20291/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
+}
+
+Requisicoes.readAll()
+
+
