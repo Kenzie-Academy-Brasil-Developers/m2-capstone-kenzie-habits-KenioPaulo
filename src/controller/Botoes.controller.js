@@ -16,7 +16,7 @@ botaoCriar.addEventListener('click', () => {
     })
 })
 
-function botaoEditar() {
+function botaoEditarPerfil() {
     const botaoEditar = document.querySelector(".btn_editar")
     botaoEditar.addEventListener("click", () => {
         Modais.editarPerfil()
@@ -26,13 +26,48 @@ function botaoEditar() {
         }) 
         const botaoSalvar = document.querySelector('.btn_salvar')
         botaoSalvar.addEventListener("click", () => {
-            alert("botao correto")
-            Requisicoes.updateProfile(foto)
+            const inputImagem = document.querySelector('.principal_imagem')
+            const foto = {
+                usr_image: ""
+            }
+            if (inputImagem.value !== "") {
+                foto.usr_image = inputImagem.value
+                console.log(foto)
+                Requisicoes.updateProfile(foto)
+            } else {alert("Coloque uma url de uma imagem")}
         })
     
     })
 }
 
+function botaoLogout () {
+    const botaoLogout = document.querySelector(".btn_logout")
+    botaoLogout.addEventListener("click", () => {
+        localStorage.clear()
+        window.location.replace("./src/views/login.views.html")
+    })
+}
+
+
+function botaoCriarHabito() {
+    const botaoCriar = document.querySelector(".bttn_Criar")
+    botaoCriar.addEventListener('click', () => {
+        Modais.criarHabito()
+        document.querySelector(".modal_page").style.display = "block"
+        document.querySelector(".btn_fechar").addEventListener("click", ()=>{
+            document.querySelector(".modal_page").style.display = "none"
+        })
+        document.querySelector(".btn_inserir").addEventListener("click", () =>{
+            const data = {
+                habit_title: "",
+                habit_description: "",
+                habit_category: ""
+            }
+            
+            Requisicoes.createHabit()
+        })
+    })
+}
 
 
 
@@ -41,16 +76,16 @@ function botaoCheck () {
     check.forEach(elem => {
         elem.addEventListener("click", (event) => {
         const evento = event.target
-        console.log(evento.parentNode.parentNode.id)
+        const id = evento.parentNode.parentNode.id
             if (evento.tagName === "INPUT" && evento.parentNode.parentNode.id !== "") {
                 const filhos = evento.parentNode.parentNode.children 
                 const arrayFilhos = [...filhos]
                 console.log(evento)
                 if(arrayFilhos[1].style.textDecoration !== "line-through"){
+                    // console.log(evento.parentNode.parentNode.id)
                     arrayFilhos[1].style.textDecoration = "line-through"
-                } else if (arrayFilhos[1].style.textDecoration == "line-through"){
-                    arrayFilhos[1].style.textDecoration = "none"
-                }
+                    Requisicoes.completeHabit(id)
+                } 
                         
             }
         })
@@ -61,7 +96,6 @@ function botaoCheck () {
 
 function botaoEditarTarefa() {
     const editar = document.querySelectorAll(".button_editar")
-    
     editar.forEach(elem => {
         elem.addEventListener("click", (event) => {
             const id = event.target.parentNode.parentNode.id
@@ -91,4 +125,4 @@ function botaoEditarTarefa() {
 }
 
 
-export {botaoCheck , botaoEditarTarefa, botaoEditar}
+export {botaoCheck , botaoEditarTarefa, botaoEditarPerfil , botaoLogout, botaoCriarHabito}
