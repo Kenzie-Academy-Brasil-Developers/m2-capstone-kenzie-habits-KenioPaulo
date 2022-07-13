@@ -1,4 +1,6 @@
 export default class Modais {
+    static botaofechar = document.querySelector(".btn_fechar")
+    static corpoPrincipal = document.querySelector(".corpo_principal")
     static criarHabito() {
         const modalPage = document.querySelector(".modal_page")
         modalPage.innerText = ""

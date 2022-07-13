@@ -1,23 +1,23 @@
-import Requisicoes from "../models/Requisicoes.models"
-
+import Requisicoes from "../models/Requisicoes.models.js"
 
 
 
 const botaoTodos = document.querySelector(".bttn_Todos")
 botaoTodos.addEventListener("click", () =>{
-   return  readAll()
+   return  Requisicoes.readAll()
 })
 
-function filtrarConcluidos(data){
-    const filtroTrue = this.readAll().filter((event) => {
-        return event.habit_status = data
+function filtrarConcluidos(){
+    const filtroTrue = Requisicoes.realAll().filter((event) => {
+        return event.habit_status === true
     })
     return filtroTrue
+    console.log(filtroTrue)
 }
 
 const botaoConcluidos = document.querySelector(".bttn_Concluidos")
 botaoConcluidos.addEventListener("click", event =>{
-    const listaConcluidos = filtrarConcluidos(true)
+    const listaConcluidos = filtrarConcluidos()
     readAll(listaConcluidos)
 })
 
