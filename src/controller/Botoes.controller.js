@@ -38,8 +38,8 @@ botaoEditar.addEventListener("click", () => {
 
 
 
-export default function botaoCheck () {
-    const check = document.querySelectorAll(".button_check")
+function botaoCheck () {
+        const check = document.querySelectorAll(".button_check")
     check.forEach(elem => {
         elem.addEventListener("click", (event) => {
         const evento = event.target
@@ -61,7 +61,7 @@ export default function botaoCheck () {
 
 
 
-export default function botoaoEditar() {
+function botaoEditarTarefa() {
     const editar = document.querySelectorAll(".button_editar")
     console.log(editar)
     editar.forEach(elem => {
@@ -72,3 +72,6 @@ export default function botoaoEditar() {
         })
     })
 }
+
+
+export {botaoCheck , botaoEditarTarefa}
