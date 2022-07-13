@@ -3,7 +3,7 @@ import Tabela from "../models/tabela.model.js";
 import Modais from "../controller/Modais.controller.js";
 
 
-
+// Fazer função ao carregar a pagina rodar isso tudo
 const userName     = document.querySelector(".user_name ")
 const userImg      = document.querySelector(".img_menu")
 const userHeader   = document.querySelector(".img_header")
@@ -17,12 +17,35 @@ window.addEventListener("onload" , () => {
 	
 })
 
+Requisicoes.readAll()
+
+// até aqui
+
 const login = {
     "email": "grupo3Nicole@mail.com",
   "password": "343e627759cd17520661ad15047a3c8a"
 }
 
-Requisicoes.readAll()
+
+
+const botaoEditar = document.querySelector(".btn_editar")
+botaoEditar.addEventListener("click", () => {
+    Modais.editarPerfil()
+})
+
+const foto = {
+    "usr_image": "https://https://i.pinimg.com/564x/74/45/6c/74456c2bd47666329b9dee5dcad4ece7.jpg"
+}
+const botaoSalvar = document.querySelector('.btn_salvar')
+botaoSalvar.addEventListener("click", () => {
+    alert("botao correto")
+    Requisicoes.updateProfile(foto)
+})
+
+
+
+
+
 
 const botaoCriar = document.querySelector(".bttn_Criar")
 botaoCriar.addEventListener('click', () => {
@@ -34,10 +57,10 @@ Tabela.botaoEditar.addEventListener("click", () => {
     Modais.editarHabito()
 })
 
-const foto = {
-    "usr_image": "https://images.pexels.com/photos/20291/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
-}
 
-Requisicoes.readAll()
+
+
+
+
 
 

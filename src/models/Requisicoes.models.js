@@ -20,6 +20,7 @@ export default class Requisicoes {
             user.usr_image = data.usr_image
             localStorage.setItem(`@kenzie:user`, JSON.stringify(user))
             console.log(res)
+            document.location.reload(true)
             return res
         })
         .catch(err => err)
