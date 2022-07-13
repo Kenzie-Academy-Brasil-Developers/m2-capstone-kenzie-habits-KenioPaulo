@@ -270,7 +270,8 @@ td {
 
 .modal_page{
     position: fixed;
-    top: 0;
+    display: none;
+    top: 0; 
 
     bottom: 0;
     left: 0;
