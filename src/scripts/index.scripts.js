@@ -26,7 +26,3 @@ const login = {
 const foto = {
     "usr_image": "https://images.pexels.com/photos/20291/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800"
 }
-
-
-
-
