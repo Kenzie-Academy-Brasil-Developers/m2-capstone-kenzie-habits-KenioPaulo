@@ -57,14 +57,18 @@ function botaoCriarHabito() {
         document.querySelector(".btn_fechar").addEventListener("click", ()=>{
             document.querySelector(".modal_page").style.display = "none"
         })
-        document.querySelector(".btn_inserir").addEventListener("click", () =>{
+        document.querySelector(".btn_inserir").addEventListener("click", async () =>{
+            const titulo = document.querySelector(".input_titulo").value
+            const descricao = document.querySelector(".input_descricao").value
+            const selecao = document.querySelectorAll(".selecao")
             const data = {
-                habit_title: "",
-                habit_description: "",
-                habit_category: ""
+                habit_title: titulo,
+                habit_description: descricao,
+                habit_category: selecao[0].value
             }
             
-            Requisicoes.createHabit()
+            await Requisicoes.createHabit(data)
+            document.location.reload(true)
         })
     })
 }
@@ -113,10 +117,10 @@ function botaoEditarTarefa() {
                 document.querySelector(".btn_cancelar").addEventListener("click", () =>{
                     document.querySelector(".modal_page").style.display = "none" 
                 })
-                document.querySelector(".btn_sim").addEventListener("click", ()=>{
+                document.querySelector(".btn_sim").addEventListener("click", async ()=>{
                         
-                        Requisicoes.deleteHabit(id)
-                        Requisicoes.readAll()
+                        await Requisicoes.deleteHabit(id)
+                        document.location.reload(true)
                         document.querySelector(".modal_page").style.display = "none"
                 })
             })
