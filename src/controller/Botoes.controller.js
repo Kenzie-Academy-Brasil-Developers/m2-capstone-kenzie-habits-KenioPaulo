@@ -68,7 +68,11 @@ function botaoEditarTarefa() {
         elem.addEventListener("click", (event) => {
             Modais.editarHabito(event.target.parentNode.parentNode.id)
             document.querySelector(".modal_page").style.display = "block"
-            document.querySelector("")
+            document.querySelector(".btn_fechar").addEventListener("click", () => {
+                const modal = document.querySelector(".modal_page")
+                modal.innerText = ""
+                modal.style.display = "none"
+            })
         })
     })
 }
