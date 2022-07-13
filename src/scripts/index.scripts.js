@@ -53,7 +53,7 @@ botaoEditarTarefa()
 // })
 
 
-import {botaoEditarTarefa , botaoCheck, botaoEditar } from "../controller/Botoes.controller.js";
-botaoEditarTarefa()
-botaoCheck()
-botaoEditar()
+// import {botaoEditarTarefa , botaoCheck, botaoEditar } from "../controller/Botoes.controller.js";
+// botaoEditarTarefa()
+// botaoCheck()
+// botaoEditar()

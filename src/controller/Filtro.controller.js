@@ -1,6 +1,6 @@
 import Requisicoes from "../models/Requisicoes.models.js"
 import Modais from "./Modais.controller.js"
-import { botaoCheck, botaoEditar, botaoEditarTarefa } from "./Botoes.controller.js"
+// import { botaoCheck, botaoEditar, botaoEditarTarefa } from "./Botoes.controller.js"
 import Tabela from "../models/tabela.model.js"
 
 const botaoTodos = document.querySelector(".bttn_Todos")
