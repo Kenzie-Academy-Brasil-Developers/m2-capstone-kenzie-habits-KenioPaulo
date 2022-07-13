@@ -118,6 +118,7 @@ export default class Requisicoes {
             
         })
         .then(response => response.json())
+        .then(res => alert("hábito concluído com sucesso"))
         .catch(err => console.log(err))
 
     }
