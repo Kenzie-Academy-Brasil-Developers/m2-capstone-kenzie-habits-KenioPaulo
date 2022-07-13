@@ -78,16 +78,16 @@ export default class Requisicoes {
     }
 
     static async readByCategory(category){
-            return await fetch(`${this.base_url}/habits/category/${category}`,{
+        return await fetch(`${this.base_url}/habits/category/${category}`,{
 
-                method:"GET",
-                headers:{
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${localStorage.getItem("@kenzie:token")}`
-                }
-            })
-            .then(response => response.json())
-            .catch(err => console.log(err))
+            method:"GET",
+            headers:{
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${localStorage.getItem("@kenzie:token")}`
+            }
+        })
+        .then(response => response.json())
+        .catch(err => console.log(err))
     }
 
     static async updateHabit(habitId, data){

@@ -24,13 +24,16 @@ const login = {
 
 Requisicoes.readAll()
 
+
 const botaoCriar = document.querySelector(".bttn_Criar")
 botaoCriar.addEventListener('click', () => {
     Modais.criarHabito()
-    document.querySelector(".modal_page").style.display = "block"
-    document.querySelector(".btn_fechar").addEventListener("click", () => {
-        document.querySelector(".modal_page").style.display = "none"
-    })
+})
+
+
+Tabela.botaoEditar.addEventListener("click", () => {
+    Modais.editarHabito()
+    
 })
 
 const foto = {

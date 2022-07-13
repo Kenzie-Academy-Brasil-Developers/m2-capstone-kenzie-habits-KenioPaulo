@@ -1,6 +1,6 @@
 export default class Modais {
     static botaofechar = document.querySelector(".btn_fechar")
-    static corpoPrincipal = document.querySelector(".corpo_principal")
+    
     static criarHabito() {
         const modalPage = document.querySelector(".modal_page")
         modalPage.innerText = ""
@@ -111,75 +111,75 @@ export default class Modais {
         const btn_excluir = document.createElement("button")
         const btn_alterar = document.createElement("button")
     
-    ////////Classes///////////////////////////
+        ////////Classes///////////////////////////
     
-            corpoPrincipal.classList.add('corpo_principal')
-            cabecalho.classList.add('cabecalho')
-            cabecalho_editar.classList.add("cabecalho_editar")
-            btn_fechar.classList.add('btn_fechar')
-    
-    
-            titulo.classList.add("titulo")
-    
-            titulo_texto.classList.add("titulo_texto")
-            input_titulo.classList.add("input_titulo")
-    
-            titulo_descricao.classList.add("titulo_descricao")
-            input_descricao.classList.add("input_descricao")
-    
-            titulo_categoria.classList.add("titulo_categoria")
-            selecao.classList.add("selecao")
+        corpoPrincipal.classList.add('corpo_principal')
+        cabecalho.classList.add('cabecalho')
+        cabecalho_editar.classList.add("cabecalho_editar")
+        btn_fechar.classList.add('btn_fechar')
 
-            btn_alterar.classList.add("btn_alterar")
-            btn_excluir.classList.add("btn_excluir")
-    
-    //////////////////Valores//////////////////
-    
-            cabecalho_editar.innerText = "Editar"
-            input_titulo.type = "text"
-            input_titulo.innerText = ""
-            btn_fechar.innerText = "X"
-    
-            titulo_descricao.innerText = "Descrição"
-            input_descricao.type = "text"
-            input_descricao.innerText = ""
-    
-            titulo_categoria.innerText = "Categoria"
-    
-            option1.value = "selecionar"
-            option1.innerText = "Selecionar Categoria"
 
-            option2.value = "saude"
-            option2.innerText = "Saude"
+        titulo.classList.add("titulo")
+
+        titulo_texto.classList.add("titulo_texto")
+        input_titulo.classList.add("input_titulo")
+
+        titulo_descricao.classList.add("titulo_descricao")
+        input_descricao.classList.add("input_descricao")
+
+        titulo_categoria.classList.add("titulo_categoria")
+        selecao.classList.add("selecao")
+
+        btn_alterar.classList.add("btn_alterar")
+        btn_excluir.classList.add("btn_excluir")
     
-            option3.value = "tabalho"
-            option3.innerText = "Trabalho"
+        //////////////////Valores//////////////////
     
-            option4.value =  "lazer"
-            option4.innerText = "Lazer"
-    
-            option5.value =  "estudos"
-            option5.innerText = "Estudos"
-    
-            btn_excluir.innerText = "Excluir"
-            btn_alterar.innerText = "Salvar Alterações"
+        cabecalho_editar.innerText = "Editar"
+        input_titulo.type = "text"
+        input_titulo.innerText = ""
+        btn_fechar.innerText = "X"
+
+        titulo_descricao.innerText = "Descrição"
+        input_descricao.type = "text"
+        input_descricao.innerText = ""
+
+        titulo_categoria.innerText = "Categoria"
+
+        option1.value = "selecionar"
+        option1.innerText = "Selecionar Categoria"
+
+        option2.value = "saude"
+        option2.innerText = "Saude"
+
+        option3.value = "tabalho"
+        option3.innerText = "Trabalho"
+
+        option4.value =  "lazer"
+        option4.innerText = "Lazer"
+
+        option5.value =  "estudos"
+        option5.innerText = "Estudos"
+
+        btn_excluir.innerText = "Excluir"
+        btn_alterar.innerText = "Salvar Alterações"
             
     
-    //////////////////Append//////////////////////
+        //////////////////Append//////////////////////
     
-            selecao.append(option1,option2,option3,option4,option5)
-    
-            cabecalho.append(cabecalho_editar, btn_fechar)
-    
-            titulo.append(titulo_texto,input_titulo, titulo_descricao, input_descricao, titulo_categoria,selecao)
-    
-            corpoPrincipal.append(cabecalho, titulo,btn_excluir,btn_alterar)
+        selecao.append(option1,option2,option3,option4,option5)
 
-            modalPage.appendChild(corpoPrincipal)
+        cabecalho.append(cabecalho_editar, btn_fechar)
 
-            const styleModais = document.querySelector(".style-modais")
-            styleModais.href = "src/css/styleModais/editarHabito.css"
-        }
+        titulo.append(titulo_texto,input_titulo, titulo_descricao, input_descricao, titulo_categoria,selecao)
+
+        corpoPrincipal.append(cabecalho, titulo,btn_excluir,btn_alterar)
+
+        modalPage.appendChild(corpoPrincipal)
+
+        const styleModais = document.querySelector(".style-modais")
+        styleModais.href = "src/css/styleModais/editarHabito.css"
+    }
     
     
     static editarPerfil() {
@@ -271,5 +271,15 @@ export default class Modais {
 
         const styleModais = document.querySelector(".style-modais")
         styleModais.href = "src/css/styleModais/excluirHabito.css"
+    }
+
+
+    static Dados(data){
+        {
+        habit_title = inputTitulo.data
+        habit_description = inputDescricao.data
+        habit_category = selecao.data
+    }
+
     }
 }
