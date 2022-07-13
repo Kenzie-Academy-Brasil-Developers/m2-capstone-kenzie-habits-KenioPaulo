@@ -221,8 +221,8 @@ export default class Modais {
         btnSalvar.innerText = "Salvar alteraçoes"
 
         corpoBtn.append(titulo, btnFechar)
-        corpoPrincipal1.append(p,btnFechar, principalNome, principalMensagem, principalImagem, btnSalvar)
-        corpoPrincipal.append(corpoBtn, btnFechar, corpoPrincipal1)
+        corpoPrincipal1.append(p, principalNome, principalMensagem, principalImagem, btnSalvar)
+        corpoPrincipal.append(corpoBtn, corpoPrincipal1)
         modalPage.appendChild(corpoPrincipal)
 
         const styleModais = document.querySelector(".style-modais")
