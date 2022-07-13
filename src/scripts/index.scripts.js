@@ -20,7 +20,7 @@ userHeader.src     = user.usr_image
 Requisicoes.readAll()
 
 // ate aqui
-
+ 
 const login = {
     "email": "grupo3Nicole@mail.com",
   "password": "343e627759cd17520661ad15047a3c8a"
