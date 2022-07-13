@@ -2,6 +2,7 @@ import Requisicoes from "../models/Requisicoes.models.js";
 import Tabela from "../models/tabela.model.js";
 import Modais from "../controller/Modais.controller.js";
 import {botaoEditarPerfil, botaoLogout, botaoCriarHabito, botaoCheck, botaoEditarTarefa } from "../controller/Botoes.controller.js";
+import {btnConcluidos} from "../controller/Filtro.controller.js"
 
 // Fazer função ao carregar a pagina rodar isso tudo
 const userName     = document.querySelector(".user_name ")
@@ -17,7 +18,7 @@ userHeader.src     = user.usr_image
 	
 // })
 
-Requisicoes.readAll()
+await Requisicoes.readAll()
 
 // ate aqui
  
@@ -52,8 +53,15 @@ botaoEditarTarefa()
 
 // })
 
+<<<<<<< HEAD
 
 // import {botaoEditarTarefa , botaoCheck, botaoEditar } from "../controller/Botoes.controller.js";
 // botaoEditarTarefa()
 // botaoCheck()
 // botaoEditar()
+=======
+botaoEditarTarefa()
+botaoCheck()
+botaoEditarPerfil()
+btnConcluidos()
+>>>>>>> 451b9033814ecfccc7406994295bf19637b088cf
