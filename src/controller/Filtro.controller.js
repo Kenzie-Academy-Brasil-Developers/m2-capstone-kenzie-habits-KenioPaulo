@@ -12,6 +12,7 @@ botaoTodos.addEventListener("click", () =>{
 async function filtrarConcluidos(){
     const filtroTrue = await Requisicoes.readAll()
     filtroTrue.filter((event) => {
+        console.log(event)
         return event.habit_status === true
     })
     return filtroTrue
@@ -33,4 +34,4 @@ function btnConcluidos() {
 })
 
 }
-export {btnConcluidos}
+export {btnConcluidos, botaoTodos}
