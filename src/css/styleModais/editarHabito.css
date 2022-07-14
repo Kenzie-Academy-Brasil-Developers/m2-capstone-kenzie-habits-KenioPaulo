@@ -44,25 +44,32 @@
 .titulo p {
     font-size: small;
     font-weight: bold;
+    margin-top: 15px;
 }
 .selecao {
     display: flex;
     flex-direction: column;
     width: 95%;
     height: 20px;
-    border: black;
-    color: black;
+    background: #F1F3F5;
+    border: 2px solid #F1F3F5;
+    border-radius: 5px;
 }
 
 .input_descricao,
 .input_titulo {
     width: 95%;
     height: 30px;
-    border: solid 1px black;
-    background-color: rgba(var(--grey-6), 1);
+    border: 2px solid #F1F3F5;
     color: black;
     border-radius: 5px;
+    background: #F1F3F5;
 }
+
+.input_descricao{
+    height: 70px;
+}
+
 .corpo_btn{
     margin-top: 15px;
     display: flex;
@@ -77,16 +84,27 @@
     font-weight: bold;
     margin-top: 20px;
 }
+
+.btn_excluir{
+    background: #F1F3F5;
+    border: 2px solid #F1F3F5;
+}
+
+.btn_alterar{
+    border: 2px solid rgba(160, 173, 249, 1);
+    background: #A0ADF9;
+}
+
 .btn_excluir:hover {
     background-color: red;
     color: white;
-    /* border: solid 1px red ; */
+    border: solid 2px red ;
 
 }
 .btn_alterar:hover {
     background-color: rgb(36, 36, 199);
     color: white;
-    /* border: 1px solid rgb(36, 36, 199) ; */
+    border: 2px solid rgb(36, 36, 199) ;
 
 }
 
