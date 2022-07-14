@@ -202,7 +202,7 @@ td {
 
 @media screen and (max-width: 900px){
 
-    .descricao, .categoria, .td_categoria {
+    .descricao, .categoria, .td_categoria , .sumir{
         display: none;
     }
 }
