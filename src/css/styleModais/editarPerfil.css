@@ -80,6 +80,7 @@
     font-size: 14px;
     line-height: 17px;
     color: rgba(var(--grey-1), 1);
+    margin-top: 18px;
 }
 
 .principal_imagem, .principal_nome {
@@ -87,4 +88,15 @@
     width: 95%;
     padding: 7px 0 7px 16px;
     border-radius: 4px;
+}
+
+@media (max-width: 740px){
+    .corpo_principal{
+        width: 80vw;
+        
+    }
+
+    .btn_salvar{
+        margin-top: 15%;
+    }
 }
