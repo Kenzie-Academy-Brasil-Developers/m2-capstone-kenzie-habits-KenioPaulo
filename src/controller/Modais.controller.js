@@ -1,5 +1,3 @@
-import Requisicoes from "../models/Requisicoes.models.js"
-
 export default class Modais {
     static botaofechar = document.querySelector(".btn_fechar")
     

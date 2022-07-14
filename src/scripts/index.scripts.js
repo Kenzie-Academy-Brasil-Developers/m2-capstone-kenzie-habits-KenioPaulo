@@ -1,8 +1,6 @@
 import Requisicoes from "../models/Requisicoes.models.js";
-import Tabela from "../models/tabela.model.js";
-import Modais from "../controller/Modais.controller.js";
-import {botaoEditarPerfil, botaoLogout, botaoCriarHabito, botaoCheck, botaoEditarTarefa } from "../controller/Botoes.controller.js";
-import {btnConcluidos} from "../controller/Filtro.controller.js"
+import Botoes from "../controller/Botoes.controller.js";
+import Filtro from "../controller/Filtro.controller.js"
 
 await Requisicoes.readAll()
  
@@ -11,13 +9,33 @@ const login = {
   "password": "343e627759cd17520661ad15047a3c8a"
 }
 
-botaoLogout()
-botaoCriarHabito()
-botaoEditarTarefa()
-botaoCheck()
-botaoEditarPerfil()
-btnConcluidos()
+Botoes.botaoEditarPerfil()
+Botoes.botaoLogout()
+Botoes.botaoCriarHabito()
+Botoes.botaoCheck()
+Botoes.botaoEditarTarefa()
+Filtro.btnConcluidos()
+Filtro.filtroTodos()
 
+
+// const botaoEditar = document.querySelector(".btn_editar")
+// botaoEditar.addEventListener("click", () => {
+//     Modais.editarPerfil()
+//     document.querySelector(".modal_page").style.display = "block"
+//     const botaoSalvar = document.querySelector('.btn_salvar')
+//     botaoSalvar.addEventListener("click", () => {
+//         const inputImagem = document.querySelector('.principal_imagem')
+//         const foto = {
+//             usr_image: ""
+//         }
+//         if (inputImagem.value !== "") {
+//             foto.usr_image = inputImagem.value
+//             console.log(foto)
+//             Requisicoes.updateProfile(foto)
+//         } else {alert("Coloque uma url de uma imagem")}
+//     })
+
+// })
 
 if (localStorage.getItem("@kenzie:token") == null){
   window.location.replace("src/views/login.views.html")
@@ -30,6 +48,3 @@ if (localStorage.getItem("@kenzie:token") == null){
   userName.innerText = user.usr_name
   userHeader.src     = user.usr_image
 }
-
-
-
