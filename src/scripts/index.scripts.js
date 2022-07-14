@@ -53,15 +53,3 @@ botaoEditarTarefa()
 
 // })
 
-<<<<<<< HEAD
-
-// import {botaoEditarTarefa , botaoCheck, botaoEditar } from "../controller/Botoes.controller.js";
-// botaoEditarTarefa()
-// botaoCheck()
-// botaoEditar()
-=======
-botaoEditarTarefa()
-botaoCheck()
-botaoEditarPerfil()
-btnConcluidos()
->>>>>>> 451b9033814ecfccc7406994295bf19637b088cf
