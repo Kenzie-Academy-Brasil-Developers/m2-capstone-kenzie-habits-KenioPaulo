@@ -1,8 +1,6 @@
 import Requisicoes from "../models/Requisicoes.models.js";
-import Tabela from "../models/tabela.model.js";
-import Modais from "../controller/Modais.controller.js";
-import {botaoEditarPerfil, botaoLogout, botaoCriarHabito, botaoCheck, botaoEditarTarefa } from "../controller/Botoes.controller.js";
-import {btnConcluidos} from "../controller/Filtro.controller.js"
+import Botoes from "../controller/Botoes.controller.js";
+import Filtro from "../controller/Filtro.controller.js"
 
 // const userName     = document.querySelector(".user_name ")
 // const userImg      = document.querySelector(".img_menu")
@@ -15,12 +13,13 @@ import {btnConcluidos} from "../controller/Filtro.controller.js"
 
 await Requisicoes.readAll()
 
-botaoEditarPerfil()
-botaoLogout()
-botaoCriarHabito()
-botaoCheck()
-botaoEditarTarefa()
-btnConcluidos()
+Botoes.botaoEditarPerfil()
+Botoes.botaoLogout()
+Botoes.botaoCriarHabito()
+Botoes.botaoCheck()
+Botoes.botaoEditarTarefa()
+Filtro.btnConcluidos()
+Filtro.filtroTodos()
 
 
 if (localStorage.getItem("@kenzie:token") == null){
