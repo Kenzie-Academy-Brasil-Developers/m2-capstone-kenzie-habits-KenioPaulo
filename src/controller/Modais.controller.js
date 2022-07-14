@@ -276,7 +276,4 @@ export default class Modais {
         const styleModais = document.querySelector(".style-modais")
         styleModais.href = "src/css/styleModais/excluirHabito.css"
     }
-
-
-  
 }

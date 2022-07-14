@@ -110,3 +110,18 @@ form [type="submit"]:hover {
     font-size: 14px;
     line-height: 17px;
 }
+
+.validacao:invalid {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+
+}
+.infoerro {
+    background-color: ivory;
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+
+}

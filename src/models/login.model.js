@@ -21,5 +21,5 @@ export default class FormLogin {
     static async printErr(err) {
         const erro = document.querySelector(".erro")
         erro.innerText = err
-    }
+    }    
 }
