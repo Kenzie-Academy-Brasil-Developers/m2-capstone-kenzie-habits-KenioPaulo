@@ -1,36 +1,39 @@
 import Requisicoes from "../models/Requisicoes.models.js"
-import Modais from "./Modais.controller.js"
-import { botaoCheck , botaoEditarTarefa, botaoEditarPerfil } from "./Botoes.controller.js"
+import Botoes from "./Botoes.controller.js"
 import Tabela from "../models/tabela.model.js"
 
-const botaoTodos = document.querySelector(".bttn_Todos")
-botaoTodos.addEventListener("click", () =>{
-    document.location.reload(true)
+export default class Filtro {
+    static filtroTodos() {
+        const botaoTodos = document.querySelector(".bttn_Todos")
+        botaoTodos.addEventListener("click", () =>{
+            document.location.reload(true)
+        })
+    }
+
+    static async filtrarConcluidos(){
+        const filtroTrue = await Requisicoes.readAll()
+        const filtrado = filtroTrue.filter((event) => {
+            return event.habit_status === true
+        })
+        return filtrado
+    }
+
+    static btnConcluidos() {
+        const botaoConcluidos = document.querySelector(".bttn_Concluidos")
     
-})
-
-async function filtrarConcluidos(){
-    const filtroTrue = await Requisicoes.readAll()
-    const filtrado = filtroTrue.filter((event) => {
-        return event.habit_status === true
-    })
-    return filtrado
+        botaoConcluidos.addEventListener("click", async (event) =>{
+        const listaConcluidos = await Filtro.filtrarConcluidos()
+        document.querySelector(".tabela").innerText = ""
+        Tabela.criarThead()
+        listaConcluidos.forEach(elem => {
+            Tabela.criaLinha(elem)
+            if(elem.habit_status) {
+                Tabela.checarTarefa(elem.habit_id)
+            }
+         })
+        Botoes.botaoCheck()
+        Botoes.botaoEditarPerfil()
+        Botoes.botaoEditarTarefa()
+        })
+    }
 }
-
-function btnConcluidos() {
-    const botaoConcluidos = document.querySelector(".bttn_Concluidos")
-
-    botaoConcluidos.addEventListener("click", async (event) =>{
-    const listaConcluidos = await filtrarConcluidos()
-    document.querySelector(".tabela").innerText = ""
-    Tabela.criarThead()
-    listaConcluidos.forEach(elem => {
-        Tabela.criaLinha(elem)
-     })
-    botaoCheck()
-    botaoEditarPerfil()
-    botaoEditarTarefa()
-})
-
-}
-export {btnConcluidos, botaoTodos}

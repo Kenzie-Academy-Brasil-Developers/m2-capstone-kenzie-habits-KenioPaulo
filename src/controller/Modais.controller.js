@@ -1,5 +1,3 @@
-import Requisicoes from "../models/Requisicoes.models.js"
-
 export default class Modais {
     static botaofechar = document.querySelector(".btn_fechar")
     
@@ -54,12 +52,13 @@ export default class Modais {
         btnFechar.innerText = "X"
         conteudoCabecalho.innerText = "Titulo"
         conteudoDescricao.innerText = "Descrição"
-        inputDescricao.name = ""
         inputDescricao.placeholder = "Digitar descrição"
+        inputDescricao.required = true
         conteudoCategoria.innerText = "Categoria"
         selecao.name = "selecionar"
         btnInserir.innerText = "Inserir"
         inputTitulo.placeholder = "Digitar título"
+        inputTitulo.required = true
 
         option1.innerText = "Selecionar Categoria"
         option2.innerText = "Saude"
@@ -77,7 +76,7 @@ export default class Modais {
         styleModais.href = "src/css/styleModais/criarHabito.css"
     }
 
-    static editarHabito() {
+    static editarHabito(habitotitulo, habitodescricao, habitoCategoria) {
 
         const modalPage = document.querySelector(".modal_page")
         modalPage.innerText = ""
@@ -140,11 +139,14 @@ export default class Modais {
         cabecalho_editar.innerText = "Editar"
         input_titulo.type = "text"
         input_titulo.innerText = ""
+        input_titulo.value = habitotitulo
         btn_fechar.innerText = "X"
+        titulo.innerText = "Titulo"
 
         titulo_descricao.innerText = "Descrição"
         input_descricao.type = "text"
         input_descricao.innerText = ""
+        input_descricao.value = habitodescricao
 
         titulo_categoria.innerText = "Categoria"
 
@@ -154,7 +156,7 @@ export default class Modais {
         option2.value = "saude"
         option2.innerText = "Saude"
 
-        option3.value = "tabalho"
+        option3.value = "trabalho"
         option3.innerText = "Trabalho"
 
         option4.value =  "lazer"
@@ -166,7 +168,15 @@ export default class Modais {
         btn_excluir.innerText = "Excluir"
         btn_alterar.innerText = "Salvar Alterações"
             
-    
+        if (option2.value == habitoCategoria){
+            option2.selected = true
+        } else if (option3.value == habitoCategoria){
+            option3.selected = true
+        } else if (option4.value == habitoCategoria){
+            option4.selected = true
+        } else if (option5.value == habitoCategoria){
+            option5.selected = true
+        }
         //////////////////Append//////////////////////
     
         selecao.append(option1,option2,option3,option4,option5)
