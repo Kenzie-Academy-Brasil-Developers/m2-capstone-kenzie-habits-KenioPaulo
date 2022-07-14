@@ -74,7 +74,12 @@ export default class Requisicoes {
             Tabela.criarThead()
             response.forEach(elem => {
                 Tabela.criaLinha(elem)
+                if(elem.habit_status) {
+                    Tabela.checarTarefa(elem.habit_id)
+                }
+                
              })
+             console.log(response)
              return response
         })
         .catch(err => console.log(err));
