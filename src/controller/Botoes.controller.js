@@ -100,7 +100,13 @@ export default class Botoes {
         editar.forEach(elem => {
             elem.addEventListener("click", (event) => {
                 const id = event.target.parentNode.parentNode.id
-                Modais.editarHabito(id)
+                const tarefa = event.target.parentNode.parentNode
+                const tituloTarefa = tarefa.querySelector(".tarefas").innerText
+                const descricaoTarefa = tarefa.querySelector(".descricao").innerText
+                const selecaoTarefa = tarefa.querySelector(".categoria").innerText
+
+                Modais.editarHabito(tituloTarefa, descricaoTarefa, selecaoTarefa)
+                
                 document.querySelector(".modal_page").style.display = "block"
                 document.querySelector(".btn_fechar").addEventListener("click", () => {
                     const modal = document.querySelector(".modal_page")
