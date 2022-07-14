@@ -184,6 +184,17 @@ td {
 
 }
 
+
+
+.categoria {
+    margin-left: 10px;
+    padding: 2px;
+    height: 30px;
+    background-color: rgb(var(--brand-3));
+    color: rgb(var(--brand-2));
+    font-size: 13px;
+}
+
 .button_check {
     cursor: pointer;
 }
@@ -191,7 +202,7 @@ td {
 
 @media screen and (max-width: 900px){
 
-    .descricao, .categoria, .td_categoria {
+    .descricao, .categoria, .td_categoria , .sumir{
         display: none;
     }
 }
