@@ -75,6 +75,7 @@ export default class Requisicoes {
             response.forEach(elem => {
                 Tabela.criaLinha(elem)
              })
+             console.log(response)
              return response
         })
         .catch(err => console.log(err));

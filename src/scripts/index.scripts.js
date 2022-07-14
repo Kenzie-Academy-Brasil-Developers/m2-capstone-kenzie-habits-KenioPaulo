@@ -27,35 +27,10 @@ const login = {
   "password": "343e627759cd17520661ad15047a3c8a"
 }
 
-botaoEditarPerfil()
+
+
 botaoLogout()
 botaoCriarHabito()
-botaoCheck()
-botaoEditarTarefa()
-
-
-// const req = {
-//     habit_title: "Fiz isso aqui sem querer",
-//     habit_description: "fazer todos os botoes darem certo",
-//     habit_category: "Saude"
-// }
-
-// const req2 = {
-//     habit_title: "testar botao editar",
-//     habit_description: "fazer botao editar",
-//     habit_category: "trabalho"
-// }
-
-// const req3 = {
-//     habit_title: "testar botao concluidos",
-//     habit_description: "filtro concluido",
-//     habit_category: "lazer"
-// }
-
-
-
-
-
 botaoEditarTarefa()
 botaoCheck()
 botaoEditarPerfil()
