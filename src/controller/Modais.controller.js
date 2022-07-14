@@ -75,7 +75,7 @@ export default class Modais {
         styleModais.href = "src/css/styleModais/criarHabito.css"
     }
 
-    static editarHabito(habitotitulo, habitodescricao) {
+    static editarHabito(habitotitulo, habitodescricao, habitoCategoria) {
 
         const modalPage = document.querySelector(".modal_page")
         modalPage.innerText = ""
@@ -138,12 +138,13 @@ export default class Modais {
         cabecalho_editar.innerText = "Editar"
         input_titulo.type = "text"
         input_titulo.innerText = ""
-        input_titulo.value = "habitotitulo"
+        input_titulo.value = habitotitulo
         btn_fechar.innerText = "X"
 
         titulo_descricao.innerText = "Descrição"
         input_descricao.type = "text"
         input_descricao.innerText = ""
+        input_descricao.value = habitodescricao
 
         titulo_categoria.innerText = "Categoria"
 
@@ -165,7 +166,15 @@ export default class Modais {
         btn_excluir.innerText = "Excluir"
         btn_alterar.innerText = "Salvar Alterações"
             
-    
+        if (option2.value == habitoCategoria){
+            option2.selected = true
+        } else if (option3.value == habitoCategoria){
+            option3.selected = true
+        } else if (option4.value == habitoCategoria){
+            option4.selected = true
+        } else if (option5.value == habitoCategoria){
+            option5.selected = true
+        }
         //////////////////Append//////////////////////
     
         selecao.append(option1,option2,option3,option4,option5)

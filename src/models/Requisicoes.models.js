@@ -77,9 +77,7 @@ export default class Requisicoes {
                 if(elem.habit_status) {
                     Tabela.checarTarefa(elem.habit_id)
                 }
-                
              })
-             console.log(response)
              return response
         })
         .catch(err => console.log(err));
