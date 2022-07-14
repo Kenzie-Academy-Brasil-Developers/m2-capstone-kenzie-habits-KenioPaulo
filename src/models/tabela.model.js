@@ -1,7 +1,6 @@
 export default class Tabela {
     static tabela      = document.querySelector(".tabela")
-    // static arrayLinhas = []
-
+    
     static criarThead() {
         this.tabela.innerText = ""
         this.tabela.insertAdjacentHTML("afterbegin", `
@@ -9,7 +8,7 @@ export default class Tabela {
           <th class="status">Status</th>
           <th class="titulo">Título</th>
           <th class="descricao">Descrição</th>
-          <th class="categoria">Categoria</th>
+          <th class="sumir">Categoria</th>
           <th class="editar">Editar</th>
         </thead>
         `)
@@ -74,7 +73,17 @@ export default class Tabela {
         return td
     }
 
-    static botaoEditar() {
-        
+   static checarTarefa (id) {
+        const tarefa = document.querySelectorAll(".tarefas")
+        const inputs = document.querySelectorAll(".button_check")
+        for (let i = 0; i < tarefa.length; i++) {
+            if(tarefa[i].parentNode.id == id){
+                tarefa[i].style.textDecoration = "line-through"
+                tarefa[i].parentNode.style.backgroundColor = "rgb( 241, 243, 245)"
+                inputs[i].checked = true
+            }
+            
+        }
     }
+
 }
