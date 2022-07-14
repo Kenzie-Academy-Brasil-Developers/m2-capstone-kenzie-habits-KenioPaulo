@@ -27,6 +27,9 @@ export default class Filtro {
         Tabela.criarThead()
         listaConcluidos.forEach(elem => {
             Tabela.criaLinha(elem)
+            if(elem.habit_status) {
+                Tabela.checarTarefa(elem.habit_id)
+            }
          })
         Botoes.botaoCheck()
         Botoes.botaoEditarPerfil()
