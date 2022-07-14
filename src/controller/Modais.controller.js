@@ -141,7 +141,7 @@ export default class Modais {
         input_titulo.innerText = ""
         input_titulo.value = habitotitulo
         btn_fechar.innerText = "X"
-        titulo.innerText = "Titulo"
+        titulo_texto.innerText = "Titulo"
 
         titulo_descricao.innerText = "Descrição"
         input_descricao.type = "text"
