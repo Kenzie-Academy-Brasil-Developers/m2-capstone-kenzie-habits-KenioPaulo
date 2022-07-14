@@ -8,7 +8,7 @@ export default class Tabela {
           <th class="status">Status</th>
           <th class="titulo">Título</th>
           <th class="descricao">Descrição</th>
-          <th class="categoria">Categoria</th>
+          <th>Categoria</th>
           <th class="editar">Editar</th>
         </thead>
         `)
