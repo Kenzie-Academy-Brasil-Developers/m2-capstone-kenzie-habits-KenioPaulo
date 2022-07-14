@@ -1,21 +1,24 @@
 import Requisicoes from "../models/Requisicoes.models.js"
 import Modais from "./Modais.controller.js"
+<<<<<<< HEAD
 import { botaoCheck, botaoEditarPerfil, botaoEditarTarefa } from "./Botoes.controller.js"
+=======
+import { botaoCheck , botaoEditarTarefa, botaoEditarPerfil } from "./Botoes.controller.js"
+>>>>>>> 313464fd95cd769dcdf0f018eaf4ef90f72b2e2d
 import Tabela from "../models/tabela.model.js"
 
 const botaoTodos = document.querySelector(".bttn_Todos")
 botaoTodos.addEventListener("click", () =>{
-    Requisicoes.readAll()
+    document.location.reload(true)
     
 })
 
 async function filtrarConcluidos(){
     const filtroTrue = await Requisicoes.readAll()
-    filtroTrue.filter((event) => {
-        console.log(event)
+    const filtrado = filtroTrue.filter((event) => {
         return event.habit_status === true
     })
-    return filtroTrue
+    return filtrado
 }
 
 function btnConcluidos() {

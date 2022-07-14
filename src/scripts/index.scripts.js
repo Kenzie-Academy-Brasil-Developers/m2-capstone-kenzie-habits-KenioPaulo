@@ -4,34 +4,23 @@ import Modais from "../controller/Modais.controller.js";
 import {botaoEditarPerfil, botaoLogout, botaoCriarHabito, botaoCheck, botaoEditarTarefa } from "../controller/Botoes.controller.js";
 import {btnConcluidos} from "../controller/Filtro.controller.js"
 
-// Fazer função ao carregar a pagina rodar isso tudo
-const userName     = document.querySelector(".user_name ")
-const userImg      = document.querySelector(".img_menu")
-const userHeader   = document.querySelector(".img_header")
-const user         = JSON.parse(localStorage.getItem("@kenzie:user"))
-userImg.src        = user.usr_image
-userName.innerText = user.usr_name
-userHeader.src     = user.usr_image
+// const userName     = document.querySelector(".user_name ")
+// const userImg      = document.querySelector(".img_menu")
+// const userHeader   = document.querySelector(".img_header")
+// const user         = JSON.parse(localStorage.getItem("@kenzie:user"))
+// userImg.src        = user.usr_image
+// userName.innerText = user.usr_name
+// userHeader.src     = user.usr_image
 
-
-// window.addEventListener("onload" , () => {
-	
-// })
 
 await Requisicoes.readAll()
-
-// ate aqui
- 
-const login = {
-    "email": "grupo3Nicole@mail.com",
-  "password": "343e627759cd17520661ad15047a3c8a"
-}
 
 botaoEditarPerfil()
 botaoLogout()
 botaoCriarHabito()
 botaoCheck()
 botaoEditarTarefa()
+<<<<<<< HEAD
 
 
 // const botaoEditar = document.querySelector(".btn_editar")
@@ -53,3 +42,19 @@ botaoEditarTarefa()
 
 // })
 
+=======
+btnConcluidos()
+
+
+if (localStorage.getItem("@kenzie:token") == null){
+  window.location.replace("src/views/login.views.html")
+} else {
+  const userName     = document.querySelector(".user_name ")
+  const userImg      = document.querySelector(".img_menu")
+  const userHeader   = document.querySelector(".img_header")
+  const user         = JSON.parse(localStorage.getItem("@kenzie:user"))
+  userImg.src        = user.usr_image
+  userName.innerText = user.usr_name
+  userHeader.src     = user.usr_image
+}
+>>>>>>> 313464fd95cd769dcdf0f018eaf4ef90f72b2e2d
