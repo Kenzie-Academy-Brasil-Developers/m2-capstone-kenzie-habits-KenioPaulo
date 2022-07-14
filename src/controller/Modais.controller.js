@@ -52,12 +52,13 @@ export default class Modais {
         btnFechar.innerText = "X"
         conteudoCabecalho.innerText = "Titulo"
         conteudoDescricao.innerText = "Descrição"
-        inputDescricao.name = ""
         inputDescricao.placeholder = "Digitar descrição"
+        inputDescricao.required = true
         conteudoCategoria.innerText = "Categoria"
         selecao.name = "selecionar"
         btnInserir.innerText = "Inserir"
         inputTitulo.placeholder = "Digitar título"
+        inputTitulo.required = true
 
         option1.innerText = "Selecionar Categoria"
         option2.innerText = "Saude"
@@ -140,6 +141,7 @@ export default class Modais {
         input_titulo.innerText = ""
         input_titulo.value = habitotitulo
         btn_fechar.innerText = "X"
+        titulo.innerText = "Titulo"
 
         titulo_descricao.innerText = "Descrição"
         input_descricao.type = "text"
