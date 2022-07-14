@@ -75,7 +75,7 @@ export default class Modais {
         styleModais.href = "src/css/styleModais/criarHabito.css"
     }
 
-    static editarHabito() {
+    static editarHabito(habitotitulo, habitodescricao) {
 
         const modalPage = document.querySelector(".modal_page")
         modalPage.innerText = ""
@@ -138,6 +138,7 @@ export default class Modais {
         cabecalho_editar.innerText = "Editar"
         input_titulo.type = "text"
         input_titulo.innerText = ""
+        input_titulo.value = "habitotitulo"
         btn_fechar.innerText = "X"
 
         titulo_descricao.innerText = "Descrição"
@@ -152,7 +153,7 @@ export default class Modais {
         option2.value = "saude"
         option2.innerText = "Saude"
 
-        option3.value = "tabalho"
+        option3.value = "trabalho"
         option3.innerText = "Trabalho"
 
         option4.value =  "lazer"

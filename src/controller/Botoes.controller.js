@@ -120,9 +120,30 @@ export default class Botoes {
                             document.querySelector(".modal_page").style.display = "none"
                     })
                 })
+
+                document.querySelector(".btn_alterar").addEventListener("click", async () => {
+                    const titulo = document.querySelector(".input_titulo").value
+                    const descricao = document.querySelector(".input_descricao").value
+                    const selecao = document.querySelectorAll(".selecao")
+                    const data = {
+                        habit_title: titulo,
+                        habit_description: descricao,
+                        habit_category: selecao[0].value
+                      }
+                    const status = await Requisicoes.updateHabit(id, data)
+                    console.log(status)
+                    if (status.message) {
+                        Botoes.erroSalvarAlteracoes(status.message)
+                    } else {
+                        document.querySelector(".modal_page").style.display = "none"
+                    }
+                })
             })
         
         })
     }
     
+    static erroSalvarAlteracoes(erro) {
+        console.log(erro)
+    }
 }
